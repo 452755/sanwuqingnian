@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./base64.js"></script>
+</head>
+<body>
+    <script>
+        var b = new Base64();
+        var str = b.encode('01122003055');
+        alert('base64 encode:' + str); //解密
+        str = b.decode('aMFPAOVDcA');
+        alert('base64 decode:' + str);
+
+        var pass = b.encode('904108')
+        alert(pass)
+    </script>
+    <div>MDaMFPAYxMjE5MDQxMDg=OVDcA</div> 
+    <div>MD     YxMjE5MDQxMDg=     </div> 
+
+    <div>OTPJXUYA0MTA4AOPIT</div>
+    <div>OT     A0MTA4</div>
+
+    <div>MDbdHEIExMjIwMDMwNTU=TPddK</div>
+    <div>MD     ExMjIwMDMwNTU=</div>
+
+    <div>MDcYWXLAzMDU1MSAFZ</div>
+    <div>MD     AzMDU1</div>
+</body>
+</html>

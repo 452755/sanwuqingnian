@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "test.js",
+  "dependencies": {
+    "public-ip": "^5.0.0",
+    "sqlite3": "^5.0.2"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "node test.js"
   },
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "public-ip": "^5.0.0",
-    "sqlite3": "^5.0.2"
-  }
+  "license": "ISC"
 }
