@@ -1,0 +1,267 @@
+/*
+ * Copyright (C) 2008 ZXing authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package com.zxing.android.decoding;
+
+import java.util.Vector;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.net.Uri;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.util.Log;
+
+import com.emms.activity.StyleChangeCheckInActivity;
+import com.emms.activity.StyleChangeTaskDetailsActivity;
+import com.google.zxing.BarcodeFormat;
+import com.google.zxing.Result;
+import com.zxing.android.CaptureActivity;
+import com.zxing.android.MessageIDs;
+import com.zxing.android.view.ViewfinderResultPointCallback;
+
+/**
+ * This class handles all the messaging which comprises the state machine for capture.
+ *
+ * @author dswitkin@google.com (Daniel Switkin)
+ */
+public final class CaptureActivityHandler extends Handler {
+
+  private static final String TAG = CaptureActivityHandler.class.getSimpleName();
+
+  private final CaptureActivity activity;
+  private DecodeThread decodeThread = null;
+  private State state;
+
+  private final StyleChangeCheckInActivity styleChangeCheckInActivity;
+
+  private final StyleChangeTaskDetailsActivity styleChangeTaskDetailsActivity;
+
+  private enum State {
+    PREVIEW,
+    SUCCESS,
+    DONE
+  }
+
+  public CaptureActivityHandler(CaptureActivity activity, Vector<BarcodeFormat> decodeFormats,
+      String characterSet) {
+    this.activity = activity;
+    decodeThread = new DecodeThread(activity, decodeFormats, characterSet,
+        new ViewfinderResultPointCallback(activity.getViewfinderView()));
+    decodeThread.start();
+    state = State.SUCCESS;
+
+    // Start ourselves capturing previews and decoding.
+    //CameraManager.get().startPreview();
+    activity.getCameraManager().startPreview();
+    restartPreviewAndDecode();
+    styleChangeCheckInActivity = null;
+    styleChangeTaskDetailsActivity = null;
+  }
+
+  public CaptureActivityHandler(StyleChangeCheckInActivity activity, Vector<BarcodeFormat> decodeFormats,
+                                String characterSet) {
+    this.styleChangeCheckInActivity = activity;
+//    decodeThread = new DecodeThread(activity, decodeFormats, characterSet,
+//            new ViewfinderResultPointCallback(activity.getViewfinderView()));
+//    decodeThread.start();
+    state = State.SUCCESS;
+
+    // Start ourselves capturing previews and decoding.
+    //CameraManager.get().startPreview();
+    activity.getCameraManager().startPreview();
+    restartPreviewAndDecode();
+    this.activity = null;
+    this.styleChangeTaskDetailsActivity = null;
+  }
+
+    public CaptureActivityHandler(StyleChangeTaskDetailsActivity activity, Vector<BarcodeFormat> decodeFormats,
+                                  String characterSet) {
+        this.styleChangeTaskDetailsActivity = activity;
+//        decodeThread = new DecodeThread(activity, decodeFormats, characterSet,
+//                new ViewfinderResultPointCallback(activity.getViewfinderView()));
+//        decodeThread.start();
+        state = State.SUCCESS;
+
+        // Start ourselves capturing previews and decoding.
+        //CameraManager.get().startPreview();
+        activity.getCameraManager().startPreview();
+        restartPreviewAndDecode();
+        this.activity = null;
+        this.styleChangeCheckInActivity = null;
+    }
+
+  @Override
+  public void handleMessage(Message message) {
+    switch (message.what) {
+      case MessageIDs.auto_focus:
+        //Log.d(TAG, "Got auto-focus message");
+        // When one auto focus pass finishes, start another. This is the closest thing to
+        // continuous AF. It does seem to hunt a bit, but I'm not sure what else to do.
+        if (state == State.PREVIEW) {
+         // CameraManager.get().requestAutoFocus(this, MessageIDs.auto_focus);
+          if (activity!=null){
+            activity.getCameraManager().requestAutoFocus(this, MessageIDs.auto_focus);
+          }
+
+          if (styleChangeCheckInActivity!=null){
+//            styleChangeCheckInActivity.getCameraManager().requestAutoFocus(this, MessageIDs.auto_focus);
+          }
+
+          if (styleChangeTaskDetailsActivity!=null){
+//                styleChangeTaskDetailsActivity.getCameraManager().requestAutoFocus(this, MessageIDs.auto_focus);
+          }
+
+        }
+        break;
+      case MessageIDs.restart_preview:
+        Log.d(TAG, "Got restart preview message");
+        restartPreviewAndDecode();
+        break;
+      case MessageIDs.decode_succeeded:
+        Log.d(TAG, "Got decode succeeded message");
+        state = State.SUCCESS;
+        Bundle bundle = message.getData();
+        Bitmap barcode = bundle == null ? null :
+            (Bitmap) bundle.getParcelable(DecodeThread.BARCODE_BITMAP);
+        if (activity!=null){
+          activity.handleDecode((Result) message.obj, barcode);
+        }
+
+        if (styleChangeCheckInActivity!=null){
+//          styleChangeCheckInActivity.handleDecode((Result) message.obj, barcode);
+        }
+
+        if (styleChangeTaskDetailsActivity!=null){
+//            styleChangeTaskDetailsActivity.handleDecode((Result) message.obj, barcode);
+        }
+
+        break;
+      case MessageIDs.decode_failed:
+        // We're decoding as fast as possible, so when one decode fails, start another.
+        state = State.PREVIEW;
+        //CameraManager.get().requestPreviewFrame(decodeThread.getHandler(), MessageIDs.decode);
+        if (activity!=null){
+          activity.getCameraManager().requestPreviewFrame(decodeThread.getHandler(), MessageIDs.decode);
+        }
+
+        if (styleChangeCheckInActivity!=null){
+          styleChangeCheckInActivity.getCameraManager().requestPreviewFrame(decodeThread.getHandler(), MessageIDs.decode);
+        }
+
+          if (styleChangeTaskDetailsActivity!=null){
+              styleChangeTaskDetailsActivity.getCameraManager().requestPreviewFrame(decodeThread.getHandler(), MessageIDs.decode);
+          }
+
+        break;
+      case MessageIDs.return_scan_result:
+        Log.d(TAG, "Got return scan result message");
+        if (activity!=null){
+          activity.setResult(Activity.RESULT_OK, (Intent) message.obj);
+          activity.finish();
+        }
+
+        if (styleChangeCheckInActivity!=null){
+          styleChangeCheckInActivity.setResult(Activity.RESULT_OK, (Intent) message.obj);
+          styleChangeCheckInActivity.finish();
+        }
+
+          if (styleChangeTaskDetailsActivity!=null){
+              styleChangeTaskDetailsActivity.setResult(Activity.RESULT_OK, (Intent) message.obj);
+              styleChangeTaskDetailsActivity.finish();
+          }
+
+        break;
+      case MessageIDs.launch_product_query:
+        Log.d(TAG, "Got product query message");
+        String url = (String) message.obj;
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
+        if (activity!=null){
+          activity.startActivity(intent);
+        }
+
+        if (styleChangeCheckInActivity!=null){
+            styleChangeCheckInActivity.startActivity(intent);
+        }
+
+          if (styleChangeTaskDetailsActivity!=null){
+              styleChangeTaskDetailsActivity.startActivity(intent);
+          }
+
+        break;
+    }
+  }
+
+  public void quitSynchronously() {
+    state = State.DONE;
+   //CameraManager.get().stopPreview();
+    if (activity!=null){
+      activity.getCameraManager().stopPreview();
+    }
+
+    if (styleChangeCheckInActivity!=null){
+      styleChangeCheckInActivity.getCameraManager().stopPreview();
+    }
+
+      if (styleChangeTaskDetailsActivity!=null){
+          styleChangeTaskDetailsActivity.getCameraManager().stopPreview();
+      }
+
+    Message quit = Message.obtain(decodeThread.getHandler(), MessageIDs.quit);
+    quit.sendToTarget();
+    try {
+      decodeThread.join();
+    } catch (InterruptedException e) {
+      // continue
+    }
+
+    // Be absolutely sure we don't send any queued up messages
+    removeMessages(MessageIDs.decode_succeeded);
+    removeMessages(MessageIDs.decode_failed);
+  }
+
+  private void restartPreviewAndDecode() {
+    if (state == State.SUCCESS) {
+      state = State.PREVIEW;
+     // CameraManager.get().requestPreviewFrame(decodeThread.getHandler(), MessageIDs.decode);
+      if (activity!=null){
+        activity.getCameraManager().requestPreviewFrame(decodeThread.getHandler(), MessageIDs.decode);
+        // CameraManager.get().requestAutoFocus(this, MessageIDs.auto_focus);
+        activity.getCameraManager().requestAutoFocus(this, MessageIDs.auto_focus);
+        activity.drawViewfinder();
+      }
+
+      if (styleChangeCheckInActivity!=null){
+        styleChangeCheckInActivity.getCameraManager().requestPreviewFrame(decodeThread.getHandler(), MessageIDs.decode);
+        // CameraManager.get().requestAutoFocus(this, MessageIDs.auto_focus);
+//        styleChangeCheckInActivity.getCameraManager().requestAutoFocus(this, MessageIDs.auto_focus);
+        styleChangeCheckInActivity.drawViewfinder();
+      }
+
+        if (styleChangeTaskDetailsActivity!=null){
+            styleChangeTaskDetailsActivity.getCameraManager().requestPreviewFrame(decodeThread.getHandler(), MessageIDs.decode);
+            // CameraManager.get().requestAutoFocus(this, MessageIDs.auto_focus);
+//            styleChangeTaskDetailsActivity.getCameraManager().requestAutoFocus(this, MessageIDs.auto_focus);
+            styleChangeTaskDetailsActivity.drawViewfinder();
+        }
+
+    }
+  }
+
+}

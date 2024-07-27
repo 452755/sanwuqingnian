@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_drawer_layout"
+    android:layout_height="match_parent">
+
+<LinearLayout
+    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:drop="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/top_menu"
+        layout="@layout/toolbar" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:orientation="vertical" android:layout_width="match_parent"
+            xmlns:drop="http://schemas.android.com/apk/res-auto"
+            android:layout_height="match_parent">
+    <!--RFID-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tvICCardId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1.6"
+            android:gravity="end"
+            android:text="@string/iccard_id"
+            android:textColor="@color/text_color"
+            android:textSize="18sp" />
+                <EditText
+                    android:id="@+id/iccard_id"
+                    style="?android:attr/textViewStyle"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:height="40dip"
+                    android:background="@drawable/edit_bg_shape"
+                    android:hint="@string/scan"
+                    android:textColor="@color/text_color"
+                    android:textColorHint="@color/hint_color"
+                    android:textSize="18sp" />
+    </LinearLayout>
+
+    <!--二维码-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/equipment_num"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_qr_code"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1.6"
+            android:gravity="end"
+            android:text="@string/qrcode_id"
+            android:textColor="@color/text_color"
+            android:textSize="18sp" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3">
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_bg_shape"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_qr_code"
+                    style="?android:attr/textViewStyle"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:height="40dip"
+                    android:background="@null"
+                    android:hint="@string/scan"
+                    android:textColor="@color/text_color"
+                    android:textColorHint="@color/hint_color"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="2dip"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="2dip"
+                    android:paddingRight="2dip"
+                    android:src="@mipmap/scan" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/device_num_action"
+                android:layout_width="43dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:background="@color/transparent"
+                android:contentDescription="@null" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!--使用组织-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_using_department"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1.6"
+            android:gravity="end"
+            android:text="@string/machine_oracle_id"
+            android:textColor="@color/text_color"
+            android:textSize="18sp" />
+        <EditText
+            android:id="@+id/et_use_department"
+            style="?android:attr/textViewStyle"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:height="40dip"
+            android:background="@drawable/edit_bg_shape"
+            android:hint="@string/scan"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/hint_color"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <!--设备编号-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_device_num"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1.6"
+            android:gravity="end"
+            android:text="@string/device_num"
+            android:textColor="@color/text_color"
+            android:textSize="18sp" />
+        <EditText
+            android:id="@+id/et_device_num"
+            style="?android:attr/textViewStyle"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:height="40dip"
+            android:background="@drawable/edit_bg_shape"
+            android:hint="@string/scan"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/hint_color"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <!--出厂编号-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_factory_num"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1.6"
+            android:gravity="end"
+            android:text="@string/machine_factory_num"
+            android:textColor="@color/text_color"
+            android:textSize="18sp" />
+        <EditText
+            android:id="@+id/et_factory_num"
+            style="?android:attr/textViewStyle"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:height="40dip"
+            android:background="@drawable/edit_bg_shape"
+            android:hint="@string/scan"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/hint_color"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <!--设备名称-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_equipment_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1.6"
+            android:gravity="end"
+            android:text="@string/device_name"
+            android:textColor="@color/text_color"
+            android:textSize="18sp" />
+        <EditText
+            android:id="@+id/et_equipment_name"
+            style="?android:attr/textViewStyle"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:height="40dip"
+            android:background="@drawable/edit_bg_shape"
+            android:hint="@string/scan"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/hint_color"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <!--OrcacleID-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_oracleID"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1.6"
+            android:gravity="end"
+            android:text="@string/machine_use_organization"
+            android:textColor="@color/text_color"
+            android:textSize="18sp" />
+
+        <com.emms.ui.DropEditText
+            android:id="@+id/et_oracle_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            drop:drawableRight="@mipmap/drop_down"
+            drop:dropMode="flow_parent"
+            drop:hint="@string/select"
+            drop:hintColor="@color/hint_color" />
+    </LinearLayout>
+
+    <!--所属部门-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_subordinate_departments"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1.6"
+            android:gravity="end"
+            android:text="@string/subordinate_departments"
+            android:textColor="@color/text_color"
+            android:textSize="18sp" />
+        <TextView
+            android:id="@+id/tv_subordinate_departments_value"
+            style="?android:attr/textViewStyle"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:height="40dip"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/hint_color"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <!--设备状态-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_equipment_status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1.6"
+            android:gravity="end"
+            android:text="@string/machine_use_organization"
+            android:textColor="@color/text_color"
+            android:textSize="18sp" />
+
+        <com.emms.ui.DropEditText
+            android:id="@+id/et_equipment_status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            drop:drawableRight="@mipmap/drop_down"
+            drop:dropMode="flow_parent"
+            drop:hint="@string/select"
+            drop:hintColor="@color/hint_color" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp">
+        <Button
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:background="#FCC900"
+            android:gravity="center"
+            android:id="@+id/btn_search"
+            android:text="@string/machine_search"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            />
+
+        <Button
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:background="#FCC900"
+            android:gravity="center"
+            android:id="@+id/btn_clearData"
+            android:text="@string/machine_clear_data"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            />
+
+        <Button
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:background="#FCC900"
+            android:gravity="center"
+            android:id="@+id/btn_submit"
+            android:text="@string/machine_submit"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            />
+
+        <Button
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:background="#FCC900"
+            android:gravity="center"
+            android:id="@+id/btn_history"
+            android:text="@string/machine_history"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            />
+
+    </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
+    <include layout="@layout/activity_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"/>
+</android.support.v4.widget.DrawerLayout>

@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.emms">
+
+
+    <permission
+        android:name="${applicationId}.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+    <!-- Required  一些系统要求的权限，如访问网络等-->
+    <uses-permission android:name="${applicationId}.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <!-- Optional for location -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.READ_INSTALL_SESSIONS" />
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-feature android:name="android.hardware.nfc" />
+
+    <application
+        android:name=".activity.AppApplication"
+        android:launchMode="singleInstance"
+        android:allowBackup="true"
+        android:persistent="true"
+        android:icon="@mipmap/emmsa"
+        android:label="${app_label}"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:largeHeap="true"
+        tools:replace="android:label">
+        <activity android:name=".activity.SplashActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.LoginActivity"
+            android:screenOrientation="portrait">
+            <!--URL Scheme启动-->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="emmsuat"/>
+            </intent-filter>
+        </activity>
+        <!--<activity android:name=".activity.TaskInfoEnteringActivity"-->
+            <!--android:screenOrientation="portrait">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        <!--</activity>-->
+        <!--<activity-->
+            <!--android:name=".activity.CaptureActivity"-->
+            <!--android:screenOrientation="portrait">-->
+        <!--</activity>-->
+        <activity
+            android:name="com.zxing.android.CaptureActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.zxing.android.StyleChangeCaptureActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".activity.MeasurePointActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".activity.MeasurePointActivityNew"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".activity.MeasurePointContentActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".activity.CusActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".activity.SparePartListViewActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".activity.SparePartActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".activity.SparePartRequestActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".activity.SparePartRequestListActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".activity.TaskInfoEnteringActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".activity.EquipmentFaultSummaryActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".activity.TaskVerifyActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".activity.VersionInfoActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".activity.TeamStatusActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".activity.SystemSettingActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".activity.TaskCompleteActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!--<activity android:name=".activity.EquipmentHistory"-->
+            <!--android:screenOrientation="portrait">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        <!--</activity>-->
+        <!--<activity android:name=".push.MainActivity"-->
+            <!--android:screenOrientation="portrait">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        <!--</activity>-->
+        <activity
+            android:name=".activity.MachineActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.WorkloadVerifyActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+        <activity
+            android:name=".activity.SearchRecordActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.WorkLoadActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+        <activity
+            android:name=".activity.TaskHistory"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.TaskHistoryCheck"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.EquipmentHistory"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.SettingActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.EnteringEquipmentICCardIDActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!--<activity-->
+            <!--android:name=".activity.MainActivity"-->
+            <!--android:screenOrientation="portrait" >-->
+        <!--</activity>-->
+        <activity
+            android:name= ".activity.LoadResActivity"
+            android:launchMode= "singleTask"
+            android:process= ":mini"
+            android:alwaysRetainTaskState= "false"
+            android:excludeFromRecents= "true"
+            android:screenOrientation= "portrait" />
+
+        <activity
+            android:name=".activity.CreateTaskActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+        android:name=".activity.SummaryActivity"
+        android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.CommandActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.searchActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name=".activity.TaskListActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".activity.TaskListActivityNew"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".activity.TaskDetailsActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".activity.TaskDetailsActivityNew"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".activity.StyleChangeTaskDetailsActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".activity.StyleChangeCheckInActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.zxing.android.view.GoogleCaptureActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".activity.SubTaskManageActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".activity.PhotoActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.GetPicActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.ImageGridActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <receiver android:name=".util.NetworkConnectChangedReceiver" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+                <action android:name="android.net.wifi.STATE_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <activity
+            android:name=".activity.InvitorActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 查看大图 -->
+        <activity
+            android:name=".activity.ShowBigImageActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+
+        <!-- Rich push 核心功能 since 2.0.6-->
+        <activity
+            android:name="cn.jpush.android.ui.PopWinActivity"
+            android:theme="@style/MyDialogStyle"
+            android:exported="false">
+        </activity>
+
+        <!-- Required SDK核心功能-->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="${applicationId}" />
+            </intent-filter>
+        </activity>
+        <!-- Required  SDK核心功能-->
+        <service
+            android:name="cn.jpush.android.service.DownloadService"
+            android:enabled="true"
+            android:exported="false" >
+        </service>
+
+
+        <!-- Required SDK 核心功能-->
+        <!-- 可配置android:process参数将PushService放在其他进程中 -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:process=":pushcore"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+
+        <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
+        <!-- 若不启用该功能可删除该组件，将不拉起其他应用也不能被其他应用拉起 -->
+        <service
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.DaemonService" />
+                <category android:name="${applicationId}" />
+            </intent-filter>
+
+        </service>
+        <!-- since 3.0.9 Required SDK 核心功能-->
+        <provider
+            android:authorities="${applicationId}.DataProvider"
+            android:name="cn.jpush.android.service.DataProvider"
+            android:process=":pushcore"
+            android:exported="false"
+            />
+
+        <!-- since 3.1.0 Required SDK 核心功能-->
+        <provider
+            android:authorities="${applicationId}.DownloadProvider"
+            android:name="cn.jpush.android.service.DownloadProvider"
+            android:exported="true"
+            />
+
+        <!-- Required SDK核心功能-->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />   <!--Required  显示通知栏 -->
+                <category android:name="${applicationId}" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <data android:scheme="package" />
+            </intent-filter>
+
+        </receiver>
+
+        <!-- Required SDK核心功能-->
+        <receiver android:name="cn.jpush.android.service.AlarmReceiver" android:exported="false"/>
+
+        <!-- User defined.  For test only  用户自定义的广播接收器-->
+        <receiver
+            android:name="com.emms.push.PushReceiver"
+            android:exported="false"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!--Required  用户注册SDK的intent-->
+                <action android:name="cn.jpush.android.intent.UNREGISTRATION" />
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!--Required  用户接收SDK消息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!--Required  用户接收SDK通知栏信息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!--Required  用户打开自定义通知栏的intent-->
+                <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK" /> <!--Optional 用户接受Rich Push Javascript 回调函数的intent-->
+                <action android:name="cn.jpush.android.intent.CONNECTION" /><!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="${applicationId}" />
+            </intent-filter>
+        </receiver>
+        <!--<receiver android:name=".broadcast.ScreenOnAndOffBroadcast"-->
+            <!--android:enabled="true">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.SCREEN_OFF"/>-->
+                <!--<action android:name="android.intent.action.SCREEN_ON"/>-->
+                <!--<action android:name="android.intent.action.USER_PRESENT"/>-->
+            <!--</intent-filter>-->
+        <!--</receiver>-->
+
+        <!-- Required  . Enable it you can get statistics data with channel -->
+        <meta-data android:name="JPUSH_CHANNEL" android:value="developer-default"/>
+        <!--  </>值来自开发者平台取得的AppKey-->
+        <!-- 极光推送APP KEY kingzhang-->
+        <!--  </>正式版本的AppKey-->
+<!--        <meta-data android:name="JPUSH_APPKEY" android:value="d77ebacf4c4368c50e5d8081" />-->
+        <!--  </>UAT版本的AppKey-->
+        <meta-data android:name="JPUSH_APPKEY" android:value="9d0b43f868d45eb4492d6276" />
+        <!--  </>DEVELOPMENT的AppKey-->
+        <!--<meta-data android:name="JPUSH_APPKEY" android:value="be47eca97046a2b576a7c304" />-->
+
+        <!--<activity-->
+            <!--android:name="com.ic_emms.push.MainActivity"-->
+            <!--android:label="@string/app_name" >-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        <!--</activity>-->
+        <!-- For test only 测试高级功能 -->
+        <activity android:name="com.emms.push.PushSetActivity" android:label="@string/app_name"></activity>
+        <!-- For test only 测试设置 -->
+        <activity android:name="com.emms.push.SettingActivity" android:label="@string/app_name"></activity>
+        <!-- For test only 测试状态通知栏，需要打开的Activity -->
+        <activity android:name="com.emms.push.TestActivity" android:exported="false">
+            <intent-filter>
+                <action android:name="jpush.testAction" />
+                <category android:name="jpush.testCategory" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.king.zxing.CaptureActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".activity.ItemTrackingActivity" />
+        <activity android:name=".activity.MachineSearchActivity"/>
+        <activity android:name=".activity.MaintainHistoryActivity"/>
+
+        <service
+        android:name=".activity.GrayInnerService">
+        </service>
+        <service
+            android:name=".activity.KeepLiveService">
+        </service>
+        <service
+        android:name=".activity.KeepLiveService2">
+        </service>
+        <receiver android:name=".broadcast.KeepLiveBroadcast"
+            android:enabled="true">
+            <intent-filter android:priority="1000">
+                <action android:name="AlarmKeepLive"/>
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

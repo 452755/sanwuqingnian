@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <include layout="@layout/toolbar"
+        android:id="@id/toolbar"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+       android:layout_gravity="center_horizontal"
+        android:id="@+id/downloadImage"
+        android:src="@mipmap/download_image_uat"/>
+    <!--<ImageView-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="100dp"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_below="@+id/toolbar"-->
+        <!--android:layout_marginTop="20dp"-->
+        <!--android:id="@+id/appIcon"-->
+        <!--android:src="@mipmap/emmsa"/>-->
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/version_num_tag"-->
+        <!---->
+        <!--android:textSize="18sp"-->
+        <!--android:layout_marginTop="20dp"-->
+        <!--android:textColor="@color/text_color"-->
+        <!--android:layout_alignRight="@+id/connect_email_tag"-->
+        <!--android:text="@string/version_num"/>-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/version_num"
+        android:text="dafss"
+        android:textColor="@color/text_color"
+       android:layout_gravity="center_horizontal"
+        android:textSize="28sp"/>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="12dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/connect_email_tag"
+        android:textSize="18sp"
+        android:textColor="@color/text_color"
+        android:layout_marginLeft="15dp"
+        android:text="@string/connect_email"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/connect_email"
+        android:textColor="@color/text_color"
+        android:layout_alignTop="@+id/connect_email_tag"
+        android:layout_toRightOf="@+id/connect_email_tag"
+        android:textSize="18sp"/>
+    </RelativeLayout>
+    </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="alue1:APP显示控件类型（DTP:日期时间,DDL:下拉框,TXT:文本框），DataValue2:自定义字段中文，DataValue3:APP控件数据源SQL（为空则App控件不需要）&quot;,&quot;DataValue1&quot;:&quot;DDL&quot;,&quot;DataValue2&quot;:&quot;故障预判&quot;,&quot;DataValue3&quot;:&quot;SELECT Factory_ID,PData_ID,DataType ,DataName as DataCode,DataName ,DataDescr ,DataValue1 ,DataValue2 ,DataValue3 ,Status ,Sort ,Remark   FROM DataDictionary WHERE Factory_ID = &apos;GEW&apos; AND DataType = &apos;TroubleClass&apos;&quot;,&quot;Status&quot;:true,&quot;Sort&quot;:1,&quot;Remark&quot;:&quot;&quot;,&quot;LastUpdateTime&quot;:&quot;AAAAAAHxKq0=&quot;,&quot;CreateTime&quot;:&quot;2019-02-14T15:50:33.847&quot;},{&quot;Data_ID&quot;:76689,&quot;Factory_ID&quot;:&quot;GEW&quot;,&quot;PData_ID&quot;:0,&quot;DataType&quot;:&quot;SetField&quot;,&quot;DataCode&quot;:&quot;SetField3&quot;,&quot;DataName&quot;:&quot;Task&quot;,&quot;DataDescr&quot;:&quot;App使用扩展字段类型：DataCode:所属表名，DataName:所属字段名，DataValue1:APP显示控件类型（DTP:日期时间,DDL:下拉框,TXT:文本框），DataValue2:自定义字段中文，DataValue3:APP控件数据源SQL（为空则App控件不需要）&quot;,&quot;DataValue1&quot;:&quot;&quot;,&quot;DataValue2&quot;:&quot;&quot;,&quot;DataValue3&quot;:&quot;&quot;,&quot;Status&quot;:true,&quot;Sort&quot;:1,&quot;Remark&quot;:&quot;&quot;,&quot;LastUpdateTime&quot;:&quot;AAAAAAAF0eE=&quot;,&quot;CreateTime&quot;:&quot;2019-02-14T15:50:33.847&quot;},{&quot;Data_ID&quot;:76690,&quot;Factory_ID&quot;:&quot;GEW&quot;,&quot;PData_ID&quot;:0,&quot;DataType&quot;:&quot;SetField&quot;,&quot;DataCode&quot;:&quot;SetField4&quot;,&quot;DataName&quot;:&quot;Task&quot;,&quot;DataDescr&quot;:&quot;App使用扩展字段类型：DataCode:所属表名，DataName:所属字段名，DataValue1:APP显示控件类型（DTP:日期时间,DDL:下拉框,TXT:文本框），DataValue2:自定义字段中文，DataValue3:APP控件数据源SQL（为空则App控件不需要）&quot;,&quot;DataValue1&quot;:&quot;&quot;,&quot;DataValue2&quot;:&quot;&quot;,&quot;DataValue3&quot;:&quot;&quot;,&quot;Status&quot;:true,&quot;Sort&quot;:1,&quot;Remark&quot;:&quot;&quot;,&quot;LastUpdateTime&quot;:&quot;AAAAAAAF0eI=&quot;,&quot;CreateTime&quot;:&quot;2019-02-14T15:50:33.847&quot;},{&quot;Data_ID&quot;:76691,&quot;Factory_ID&quot;:&quot;GEW&quot;,&quot;PData_ID&quot;:0,&quot;DataType&quot;:&quot;SetField&quot;,&quot;DataCode&quot;:&quot;SetField5&quot;,&quot;DataName&quot;:&quot;Task&quot;,&quot;DataDescr&quot;:&quot;App使用扩展字段类型：DataCode:所属表名，DataName:所属字段名，DataValue1:APP显示控件类型（DTP:日期时间,DDL:下拉框,TXT:文本框），DataValue2:自定义字段中文，DataValue3:APP控件数据源SQL（为空则App控件不需要）&quot;,&quot;DataValue1&quot;:&quot;&quot;,&quot;DataValue2&quot;:&quot;&quot;,&quot;DataValue3&quot;:&quot;&quot;,&quot;Status&quot;:true,&quot;Sort&quot;:1,&quot;Remark&quot;:&quot;&quot;,&quot;LastUpdateTime&quot;:&quot;AAAAAAAF0eM=&quot;,&quot;CreateTime&quot;:&quot;2019-02-14T15:50:33.847&quot;}]--数量--->5&#xA;06-05 11:38:54.531 8122-8122/com.emms.debug E/CreateTaskActivity.java: onSuccess(CreateTaskActivity.java:2916)getTargetGroupList---数量--->3" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="alue1:APP显示控件类型（DTP:日期时间,DDL:下拉框,TXT:文本框），DataValue2:自定义字段中文，DataValue3:APP控件数据源SQL（为空则App控件不需要）&quot;,&quot;DataValue1&quot;:&quot;DDL&quot;,&quot;DataValue2&quot;:&quot;故障预判&quot;,&quot;DataValue3&quot;:&quot;SELECT Factory_ID,PData_ID,DataType ,DataName as DataCode,DataName ,DataDescr ,DataValue1 ,DataValue2 ,DataValue3 ,Status ,Sort ,Remark   FROM DataDictionary WHERE Factory_ID = &apos;GEW&apos; AND DataType = &apos;TroubleClass&apos;&quot;,&quot;Status&quot;:true,&quot;Sort&quot;:1,&quot;Remark&quot;:&quot;&quot;,&quot;LastUpdateTime&quot;:&quot;AAAAAAHxKq0=&quot;,&quot;CreateTime&quot;:&quot;2019-02-14T15:50:33.847&quot;},{&quot;Data_ID&quot;:76689,&quot;Factory_ID&quot;:&quot;GEW&quot;,&quot;PData_ID&quot;:0,&quot;DataType&quot;:&quot;SetField&quot;,&quot;DataCode&quot;:&quot;SetField3&quot;,&quot;DataName&quot;:&quot;Task&quot;,&quot;DataDescr&quot;:&quot;App使用扩展字段类型：DataCode:所属表名，DataName:所属字段名，DataValue1:APP显示控件类型（DTP:日期时间,DDL:下拉框,TXT:文本框），DataValue2:自定义字段中文，DataValue3:APP控件数据源SQL（为空则App控件不需要）&quot;,&quot;DataValue1&quot;:&quot;&quot;,&quot;DataValue2&quot;:&quot;&quot;,&quot;DataValue3&quot;:&quot;&quot;,&quot;Status&quot;:true,&quot;Sort&quot;:1,&quot;Remark&quot;:&quot;&quot;,&quot;LastUpdateTime&quot;:&quot;AAAAAAAF0eE=&quot;,&quot;CreateTime&quot;:&quot;2019-02-14T15:50:33.847&quot;},{&quot;Data_ID&quot;:76690,&quot;Factory_ID&quot;:&quot;GEW&quot;,&quot;PData_ID&quot;:0,&quot;DataType&quot;:&quot;SetField&quot;,&quot;DataCode&quot;:&quot;SetField4&quot;,&quot;DataName&quot;:&quot;Task&quot;,&quot;DataDescr&quot;:&quot;App使用扩展字段类型：DataCode:所属表名，DataName:所属字段名，DataValue1:APP显示控件类型（DTP:日期时间,DDL:下拉框,TXT:文本框），DataValue2:自定义字段中文，DataValue3:APP控件数据源SQL（为空则App控件不需要）&quot;,&quot;DataValue1&quot;:&quot;&quot;,&quot;DataValue2&quot;:&quot;&quot;,&quot;DataValue3&quot;:&quot;&quot;,&quot;Status&quot;:true,&quot;Sort&quot;:1,&quot;Remark&quot;:&quot;&quot;,&quot;LastUpdateTime&quot;:&quot;AAAAAAAF0eI=&quot;,&quot;CreateTime&quot;:&quot;2019-02-14T15:50:33.847&quot;},{&quot;Data_ID&quot;:76691,&quot;Factory_ID&quot;:&quot;GEW&quot;,&quot;PData_ID&quot;:0,&quot;DataType&quot;:&quot;SetField&quot;,&quot;DataCode&quot;:&quot;SetField5&quot;,&quot;DataName&quot;:&quot;Task&quot;,&quot;DataDescr&quot;:&quot;App使用扩展字段类型：DataCode:所属表名，DataName:所属字段名，DataValue1:APP显示控件类型（DTP:日期时间,DDL:下拉框,TXT:文本框），DataValue2:自定义字段中文，DataValue3:APP控件数据源SQL（为空则App控件不需要）&quot;,&quot;DataValue1&quot;:&quot;&quot;,&quot;DataValue2&quot;:&quot;&quot;,&quot;DataValue3&quot;:&quot;&quot;,&quot;Status&quot;:true,&quot;Sort&quot;:1,&quot;Remark&quot;:&quot;&quot;,&quot;LastUpdateTime&quot;:&quot;AAAAAAAF0eM=&quot;,&quot;CreateTime&quot;:&quot;2019-02-14T15:50:33.847&quot;}]--数量--->5&#xA;06-05 11:38:54.531 8122-8122/com.emms.debug E/CreateTaskActivity.java: onSuccess(CreateTaskActivity.java:2916)getTargetGroupList---数量--->3" />
+</LinearLayout>

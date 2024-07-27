@@ -1,0 +1,6 @@
+ext{
+    keystore_password = "Abcd1234"
+    keystore_alias = "andrew_esquel"
+    keystore_alias_password = "Abcd1234"
+    keystore_path = "../andrew_esquel.jks"
+}

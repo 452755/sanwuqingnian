@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/table_header">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:text="备件名称"
+            android:textColor="@color/text_color"
+            android:background="@drawable/wheel_val_black"
+            android:textSize="18sp"
+            android:id="@+id/name"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="4"
+            android:text="备件类型"
+            android:textColor="@color/text_color"
+            android:background="@drawable/wheel_val_black"
+            android:textSize="18sp"
+            android:id="@+id/type"/>
+        <TextView
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:text="数量"
+            android:background="@drawable/wheel_val_black"
+            android:textColor="@color/text_color"
+            android:textSize="18sp"
+            android:id="@+id/quantity"/>
+    </LinearLayout>
+</LinearLayout>

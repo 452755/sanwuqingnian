@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="select_tab_status">
+        <item>Processing</item>
+        <item>Orders</item>
+        <item>Closed Task</item>
+    </string-array>
+    <string-array name="select_tab_task_history">
+        <item>Evaluated</item>
+        <item>All Tasks</item>
+        <item>Screening</item>
+    </string-array>
+    <string-array name="select_tab_verify_status">
+        <item>Unaudited</item>
+        <item>Audited</item>
+        <item>Query</item>
+    </string-array>
+    <string-array name="select_tab_time">
+        <item>Within 1 months</item>
+        <item>Within 2 months</item>
+        <item>Within 3 months</item>
+    </string-array>
+    <string-array name="menu_list_group_arrange">
+        <item>Create New Task</item>
+        <item>Scan QR Code</item>
+        <item>Workload Input</item>
+        <item>Sub Task</item>
+        <item>Invite Assistance</item>
+        <item>Transfer Order</item>
+        <item>Complete Task</item>
+        <item>Refresh</item>
+    </string-array>
+    <string-array name="menu_list">
+        <item>Create New Task</item>
+        <item>Scan QR Code</item>
+        <item>Breakdown Summary</item>
+        <item>Sub Task</item>
+        <item>Invite Assistance</item>
+        <item>Transfer Order</item>
+        <item>Complete Task</item>
+        <item>Refresh</item>
+    </string-array>
+    <string-array name="menu_list_maintain">
+        <item>Create New Task</item>
+        <item>Scan QR Code</item>
+        <item>Workload Input</item>
+        <item>Sub Task</item>
+        <item>Invite Assistance</item>
+        <item>Transfer Order</item>
+        <item>Complete Task</item>
+        <item>Refresh</item>
+    </string-array>
+
+    <string-array name="menu_list_move_car">
+        <item>Create New Task</item>
+        <item>Scan QR Code</item>
+        <item>Invite Assistance</item>
+        <item>Transfer Order</item>
+        <item>Complete Task</item>
+        <item>Refresh</item>
+    </string-array>
+
+    <string-array name="menu_list_transfer_model">
+        <item>Create New Task</item>
+        <item>Scan QR Code</item>
+        <item>Invite Assistance</item>
+        <item>Transfer Order</item>
+        <item>Complete Task</item>
+        <item>Refresh</item>
+    </string-array>
+
+    <string-array name="menu_login">
+        <item>Set up</item>
+        <item>Binding Equipment</item>
+    </string-array>
+    <string-array name="Equipment_Status">
+        <item>In progress</item>
+        <item>Suspend</item>
+        <item>Complete</item>
+    </string-array>
+    <string-array name="Equipment_Operator_Status">
+        <item>Pending</item>
+        <item>Suspend</item>
+        <item>Complete</item>
+    </string-array>
+
+    <declare-styleable name="ViewfinderView">
+        <attr name="maskColor" format="color" />
+        <attr name="frameColor" format="color" />
+        <attr name="cornerColor" format="color"/>
+        <attr name="laserColor" format="color"/>
+        <attr name="resultPointColor" format="color"/>
+        <attr name="labelText" format="string"/>
+        <attr name="labelTextColor" format="color"/>
+        <attr name="labelTextSize" format="dimension"/>
+        <attr name="labelTextPadding" format="dimension"/>
+        <attr name="labelTextLocation" format="enum">
+            <enum name="top" value="0"/>
+            <enum name="bottom" value="1"/>
+        </attr>
+        <attr name="showResultPoint" format="boolean"/>
+        <attr name="frameWidth" format="dimension"/>
+        <attr name="frameHeight" format="dimension"/>
+    </declare-styleable>
+</resources>

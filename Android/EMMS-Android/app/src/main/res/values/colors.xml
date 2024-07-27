@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="bg_main">#EEEEEE</color>
+    <color name="bg_line">#dddddd</color>
+
+
+    <color name="text_login">#a7293d</color>
+    <color name="text_color">#333333</color>
+    <color name="lightgray_textcolor">#999999</color>
+    <color name="black">#000</color>
+    <color name="main_color">#a9293d</color>
+    <color name="main_color_debug">#2E75B6</color>
+    <color name="tag_color">#ECD3D9</color>
+    <color name="hint_color">#999999</color>
+    <color name="transparent">#00000000</color>
+    <color name="yellow">#fbca00</color>
+    <color name="white">#ffffff</color>
+    <color name="divider">#E5E5E5</color>
+    <color name="kprogresshud_default_color">#b1000000</color>
+    <color name="kprogresshud_grey_color">#449E9E9E</color>
+    <color name="processing_color">#1c9e03</color>
+    <color name="pause_color">#fe0100</color>
+    <color name="order_color">#ff8602</color>
+    <color name="click_item">#fff2db</color>
+    <color name="esquel_red">#AB2D42</color>
+
+    <color name="possible_result_points">#c0ffbd21</color> <!-- Android standard ICS color -->
+    <color name="result_text">#ff000000</color>
+    <color name="viewfinder_laser">#ffcc0000</color> <!-- Android standard ICS color -->
+    <color name="viewfinder_mask">#cb000000</color>
+    <color name="viewfinder_frame">#ff4EEE94</color><!-- #ff0000ff -->
+    <color name="backgroud">#ffffffff</color>
+    <color name="title_tv_color">#ffffffff</color>
+
+    <!--king的扫码-->
+    <!--<color name="viewfinder_mask">#60000000</color>
+    <color name="viewfinder_frame">#7F1FB3E2</color>
+    <color name="viewfinder_corner">#FF1FB3E2</color>
+    <color name="viewfinder_laser">#FF1FB3E2</color> &lt;!&ndash; Android standard ICS color &ndash;&gt;-->
+    <color name="viewfinder_result_point_color">#C0FFBD21</color>
+    <color name="viewfinder_text_color">#FFC0C0C0</color>
+    <color name="viewfinder_corner">#FF1FB3E2</color>
+
+    <color name="bind_bg">#FCC900</color>
+    <color name="sovle_bg">#F5C693</color>
+</resources>

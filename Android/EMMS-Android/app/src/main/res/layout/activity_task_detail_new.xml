@@ -1,0 +1,844 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:drop="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        layout="@layout/toolbar"/>
+
+    <ScrollView
+        android:id="@+id/scrollview_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="13dp"
+            android:paddingRight="13dp">
+
+            <include layout="@layout/deatils_record_new" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/dashedline"
+                android:layerType="software" />
+
+            <!--Raymond Edit Support SRF2021-0434 order by Leo-->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+
+                <!--待处理-->
+                <TextView
+                    android:id="@+id/textView99"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="@string/pending_count"
+                    android:textColor="@color/text_color"
+                    android:textSize="17sp" />
+
+                <!--待处理的value-->
+                <TextView
+                    android:id="@+id/pending_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/textView99"
+                    android:paddingTop="5dp"
+                    android:text="0"
+                    android:textColor="@color/text_color"
+                    android:textSize="17sp" />
+
+
+
+                <!--处理中-->
+                <TextView
+                    android:id="@+id/textView98"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:layout_toRightOf="@+id/pending_count"
+                    android:paddingTop="5dp"
+                    android:text="@string/dealing_count"
+                    android:textColor="@color/text_color"
+                    android:textSize="17sp" />
+
+                <!--处理中的value-->
+                <TextView
+                    android:id="@+id/dealing_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/textView98"
+                    android:paddingTop="5dp"
+                    android:text="0"
+                    android:textColor="@color/text_color"
+                    android:textSize="17sp" />
+
+
+                <!--已处理-->
+                <TextView
+                    android:id="@+id/textView97"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:layout_toRightOf="@+id/dealing_count"
+                    android:paddingTop="5dp"
+                    android:text="@string/dealed_count"
+                    android:textColor="@color/text_color"
+                    android:textSize="17sp" />
+
+                <!--已处理的的value-->
+                <TextView
+                    android:id="@+id/dealed_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/textView97"
+                    android:paddingTop="5dp"
+                    android:text="0"
+                    android:textColor="@color/text_color"
+                    android:textSize="17sp" />
+
+                <!--暂停-->
+                <TextView
+                    android:id="@+id/textView96"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:layout_toRightOf="@+id/dealed_count"
+                    android:paddingTop="5dp"
+                    android:text="@string/suspend_count"
+                    android:textColor="@color/text_color"
+                    android:textSize="17sp" />
+
+                <!--暂停的的value-->
+                <TextView
+                    android:id="@+id/suspend_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/textView96"
+                    android:paddingTop="5dp"
+                    android:text="0"
+                    android:textColor="@color/text_color"
+                    android:textSize="17sp" />
+
+
+                <View
+                    android:id="@+id/lineNew2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="35dp"
+                    android:background="@drawable/dashedline"
+                    android:layerType="software" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp">
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="5dp"
+                    android:text="@string/device_count"
+                    android:textColor="@color/text_color"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/device_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/textView17"
+                    android:paddingTop="5dp"
+                    android:text="0"
+                    android:textColor="@color/text_color"
+                    android:textSize="17sp" />
+
+                <View
+                    android:id="@+id/lineNew"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="35dp"
+                    android:background="@drawable/dashedline"
+                    android:layerType="software" />
+
+
+
+
+                <!--设备名称-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+
+                    android:paddingTop="45dp">
+
+                    <TextView
+                        android:id="@+id/tv_queryname"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.9"
+                        android:text="设备名称"
+                        android:textColor="@color/text_color"
+                        android:textSize="14sp"
+                        android:visibility="gone"/>
+                    <EditText
+                        android:id="@+id/et_queryname"
+                        style="?android:attr/textViewStyle"
+                        android:layout_width="120dip"
+                        android:layout_height="25dp"
+                        android:layout_weight="4"
+                        android:height="40dip"
+                        android:background="@drawable/edit_bg_shape"
+                        android:hint="设备名称"
+                        android:layout_marginRight="5dp"
+                        android:textColor="@color/text_color"
+                        android:textColorHint="@color/hint_color"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/tv_status"
+                        android:layout_width="50dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="1.6"
+                        android:text="状态:"
+                        android:textColor="@color/text_color"
+                        android:textSize="17sp" />
+                    <Spinner
+                        android:layout_width="140dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="3"
+                        android:id="@+id/spinner"
+                        />
+
+                    <Button
+                        android:id="@+id/btn_search"
+                        android:layout_width="85dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="5dp"
+                        android:background="#FCC900"
+                        android:gravity="center"
+                        android:text="@string/machine_search"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="17sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/oooooo"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"
+                    android:orientation="vertical"
+
+                    android:paddingTop="70dp">
+
+                    <com.emms.ui.ScrollViewWithListView
+                        android:id="@+id/problem_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"></com.emms.ui.ScrollViewWithListView>
+
+                    <RelativeLayout
+                        android:id="@+id/NoEquipmentLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/click_item"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:visibility="gone">
+
+                        <RelativeLayout
+                            android:id="@+id/lalalala"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/equipment_name_tag"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="@string/device_name_order"
+                                android:textColor="@color/text_color"
+                                android:textSize="17sp" />
+
+                            <TextView
+                                android:id="@+id/equipment_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@+id/equipment_name_tag"
+                                android:layout_toRightOf="@+id/equipment_name_tag"
+                                android:text="@string/NoEquipment"
+                                android:textColor="@color/text_color"
+                                android:textSize="17sp" />
+
+                            <TextView
+                                android:id="@+id/taskOperatorStatus_tag"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignRight="@+id/equipment_name_tag"
+                                android:layout_below="@+id/equipment_name"
+                                android:layout_marginTop="10dp"
+                                android:singleLine="true"
+                                android:text="@string/participant"
+                                android:textColor="@color/text_color"
+                                android:textSize="17sp" />
+
+                            <com.emms.ui.MyListView
+                                android:id="@+id/taskOperatorStatus"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@+id/taskOperatorStatus_tag"
+                                android:layout_toRightOf="@+id/taskOperatorStatus_tag"
+                                android:divider="@null" />
+                        </RelativeLayout>
+
+                        <Button
+                            android:id="@+id/changeTaskOperatorStatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@+id/lalalala"
+                            android:layout_below="@+id/lalalala"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@color/yellow"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="@string/changeTaskOperatorStatus"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/line"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="150dp"
+                        android:background="@drawable/dashedline"
+                        android:layerType="software" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/serchDeviceHistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/textView17"
+                    android:layout_alignTop="@+id/device_count"
+                    android:layout_toLeftOf="@+id/textView18"
+                    android:layout_toRightOf="@+id/device_count"
+                    android:padding="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true">
+
+                            <ImageView
+                                android:id="@+id/DeviceHistoryImage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@mipmap/search" />
+
+                            <TextView
+                                android:id="@+id/DeviceHistory"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/DeviceHistoryImage"
+                                android:singleLine="true"
+                                android:text="@string/DeveceHistory"
+                                android:textColor="@color/black"
+                                android:textSize="17sp" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+
+                android:layout_toLeftOf="@+id/deal_count"
+                android:layout_toStartOf="@+id/deal_count"
+                android:padding="5dp"
+                android:text="@string/dealed_count"
+                android:textColor="@color/text_color"
+                android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/deal_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/textView18"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginRight="15dp"
+                    android:paddingTop="5dp"
+                    android:text="0"
+                    android:textColor="@color/text_color"
+                    android:textSize="17sp" />
+
+
+
+                <!--<TextView-->
+                    <!--android:id="@+id/textView19"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_below="@id/oooooo"-->
+                    <!--android:layout_marginTop="13dp"-->
+                    <!--android:text="@string/task_picture"-->
+                    <!--android:textColor="@color/text_color"-->
+                    <!--android:textSize="17sp" />-->
+
+                <!--<com.emms.ui.ExpandGridView-->
+                    <!--android:id="@+id/picture_containt"-->
+                    <!--android:layout_width="220dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignTop="@+id/textView19"-->
+                    <!--android:layout_marginLeft="5dp"-->
+                    <!--android:layout_toEndOf="@+id/textView19"-->
+                    <!--android:layout_toRightOf="@+id/textView19"-->
+                    <!--android:horizontalSpacing="3dp"-->
+                    <!--android:numColumns="3"-->
+                    <!--android:scrollbars="none"-->
+                    <!--android:verticalSpacing="5dp"></com.emms.ui.ExpandGridView>-->
+
+                <!--<LinearLayout-->
+                <!--android:id="@+id/line1"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:layout_below="@id/picture_containt"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:background="@color/hint_color"-->
+                <!--android:layout_height="0.5dp"-->
+                <!--android:orientation="horizontal">-->
+                <!--</LinearLayout>-->
+                <!--<View-->
+                    <!--android:id="@+id/line1"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="1dp"-->
+                    <!--android:layout_below="@+id/picture_containt"-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:background="@drawable/dashedline"-->
+                    <!--android:layerType="software" />-->
+
+                <RelativeLayout
+                    android:id="@+id/task_complete"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textView19"
+                    android:layout_below="@+id/line1"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:id="@+id/fault_summary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#DFDFDF"
+                        android:visibility="gone">
+
+                        <RelativeLayout
+                            android:id="@+id/out"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp">
+
+                            <TextView
+                                android:id="@+id/fault_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:text="@string/fault_summary"
+                                android:textColor="@color/esquel_red"
+                                android:textSize="20sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/out"
+                            android:layout_marginTop="5dp">
+
+                            <TextView
+                                android:id="@+id/fault_type_tag"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignRight="@+id/fault_description_tag"
+                                android:text="@string/fault_t"
+                                android:textColor="@color/text_color"
+                                android:textSize="17sp" />
+
+                            <TextView
+                                android:id="@+id/fault_type"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@+id/fault_type_tag"
+                                android:layout_marginRight="5dp"
+                                android:layout_toRightOf="@+id/fault_type_tag"
+                                android:textColor="@color/text_color"
+                                android:textSize="17sp" />
+
+                            <TextView
+                                android:id="@+id/fault_description_tag"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/fault_type"
+                                android:layout_marginTop="5dp"
+                                android:text="@string/fault_d"
+                                android:textColor="@color/text_color"
+                                android:textSize="17sp" />
+
+                            <TextView
+                                android:id="@+id/fault_description"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@+id/fault_description_tag"
+                                android:layout_marginRight="5dp"
+                                android:layout_toRightOf="@+id/fault_description_tag"
+                                android:textColor="@color/text_color"
+                                android:textSize="17sp" />
+
+                            <TextView
+                                android:id="@+id/repair_status_tag"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignRight="@+id/fault_description_tag"
+                                android:layout_below="@+id/fault_description"
+                                android:layout_marginTop="5dp"
+                                android:text="@string/repair_s"
+                                android:textColor="@color/text_color"
+                                android:textSize="17sp" />
+
+                            <TextView
+                                android:id="@+id/repair_status"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@+id/repair_status_tag"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_toRightOf="@+id/repair_status_tag"
+                                android:textColor="@color/text_color"
+                                android:textSize="17sp" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/workload"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/fault_summary"
+                        android:layout_marginTop="20dp"
+                        android:background="#DFDFDF">
+
+                        <TextView
+                            android:id="@+id/workload_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/workload_title"
+                            android:textColor="@color/esquel_red"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/workload_tag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/workload_title"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/total_workload"
+                            android:textColor="@color/text_color"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:id="@+id/workload_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@+id/workload_tag"
+                            android:layout_toRightOf="@+id/workload_tag"
+                            android:textColor="@color/text_color"
+                            android:textSize="17sp" />
+
+                        <com.emms.ui.MyListView
+                            android:id="@+id/workloadList"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/workload_num"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="#DFDFDF"></com.emms.ui.MyListView>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/Command_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/workload"
+                        android:layout_marginTop="20dp"
+                        android:background="#DFDFDF"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/task_command"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/task_command"
+                            android:textColor="@color/esquel_red"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/response_speed_tag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@+id/repair_speed_tag"
+                            android:layout_below="@+id/task_command"
+                            android:layout_marginTop="20dp"
+                            android:text="@string/response_speed"
+                            android:textColor="@color/black"
+                            android:textSize="17sp" />
+
+                        <com.emms.ui.HorizontalListView
+                            android:id="@+id/response_speed"
+                            android:layout_width="600dp"
+                            android:layout_height="70dp"
+                            android:layout_alignTop="@+id/response_speed_tag"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@+id/response_speed_tag">
+                            ></com.emms.ui.HorizontalListView>
+
+                        <TextView
+                            android:id="@+id/service_attitude_tag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@+id/repair_speed_tag"
+                            android:layout_below="@+id/response_speed_tag"
+                            android:layout_marginTop="20dp"
+                            android:text="@string/service_attitude"
+                            android:textColor="@color/black"
+                            android:textSize="17sp" />
+
+                        <com.emms.ui.HorizontalListView
+                            android:id="@+id/service_attitude"
+                            android:layout_width="600dp"
+                            android:layout_height="70dp"
+                            android:layout_alignTop="@+id/service_attitude_tag"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@+id/service_attitude_tag">
+                            >
+                        </com.emms.ui.HorizontalListView>
+                        <!--
+                    <GridView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_alignTop="@+id/service_attitude_tag"
+                        android:numColumns="5"
+                        android:id="@+id/service_attitude"
+                        android:layout_toRightOf="@+id/service_attitude_tag"></GridView>
+                        -->
+                        <TextView
+                            android:id="@+id/repair_speed_tag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/service_attitude_tag"
+                            android:layout_marginTop="20dp"
+                            android:text="@string/repair_speed"
+                            android:textColor="@color/black"
+                            android:textSize="17sp" />
+
+                        <com.emms.ui.HorizontalListView
+                            android:id="@+id/repair_speed"
+                            android:layout_width="600dp"
+                            android:layout_height="70dp"
+                            android:layout_alignTop="@+id/repair_speed_tag"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@+id/repair_speed_tag">
+                            ></com.emms.ui.HorizontalListView>
+
+                        <TextView
+                            android:id="@+id/mes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@+id/repair_speed_tag"
+                            android:layout_below="@+id/repair_speed_tag"
+                            android:layout_marginTop="15dp"
+                            android:text="@string/command_standard" />
+
+                        <!--故障维修确认-->
+                        <LinearLayout
+                            android:id="@+id/comfirm_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/mes"
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginTop="5dp"
+                            android:background="#DFDFDF"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:id="@+id/tv_repair_confirm"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="@string/RepairConfirmation"
+                                android:textColor="@color/esquel_red"
+                                android:textSize="20sp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center_horizontal"
+                                android:orientation="horizontal">
+
+                                <Button
+                                    android:id="@+id/btn_solved"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/click_item"
+                                    android:padding="10dp"
+                                    android:text="@string/FaultResolved"
+                                    android:textColor="@color/esquel_red"
+                                    android:textSize="17sp" />
+
+                                <Button
+                                    android:id="@+id/btn_unsolved"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="25dp"
+                                    android:background="@color/click_item"
+                                    android:padding="10dp"
+                                    android:text="@string/FailureNotSolve"
+                                    android:textColor="@color/esquel_red"
+                                    android:textSize="17sp" />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/submitCommand"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/comfirm_layout"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/yellow"
+                            android:text="@string/sure"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="17sp"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+                <!--
+                                <LinearLayout
+                                    android:id="@+id/edit_reason"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="6dp"
+                                    android:layout_below="@id/line1"
+                                    android:layout_marginTop="5dp"
+                                    android:orientation="horizontal">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="17sp"
+                                        android:layout_gravity="center_vertical"
+                                        android:textColor="@color/text_color"
+                                        android:text="@string/task_reason_add"
+                                        android:id="@+id/textView21" />
+
+                                    <com.ic_emms.ui.DropEditText
+                                        android:id="@+id/task_reason_edit"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="wrap_content"
+                                        drop:drawableRight="@mipmap/drop_down"
+                                        drop:dropMode="flow_parent"
+                                        drop:hint="@string/task_reason"
+                                        drop:hintColor="@color/text_color">
+                                    </com.ic_emms.ui.DropEditText>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_below="@id/edit_reason"
+                                    android:layout_width="match_parent"
+                                    android:background="@color/hint_color"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_height="0.5dp"
+                                    android:orientation="horizontal"
+                                    android:id="@+id/line2"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="6dp"
+                                    android:layout_below="@id/line2"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginBottom="13dp"
+                                    android:orientation="horizontal">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="17sp"
+                                        android:layout_gravity="center_vertical"
+                                        android:textColor="@color/text_color"
+                                        android:text="@string/task_note" />
+
+                                    <EditText
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="wrap_content"
+                                        style="?android:attr/textViewStyle"
+                                        android:background="@drawable/edit_bg_shape"
+                                        android:textColorHint="@color/hint_color"
+                                        android:textColor="@color/text_color"
+                                        android:height="40dip"
+                                        android:textSize="18sp"
+                                        android:hint="@string/hint_task_note">
+                                    </EditText>
+                                </LinearLayout>
+                                -->
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+</LinearLayout>

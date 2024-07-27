@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+ android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="13dp"
+    android:paddingBottom="13dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color"
+        android:textSize="17sp"
+        android:layout_alignParentTop="true"
+        android:singleLine="true"
+        android:text="@string/applicanter"
+        android:layout_alignRight="@+id/textView16"
+        android:id="@+id/textView13" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/task_creater"
+        android:textColor="@color/text_color"
+        android:textSize="17sp"
+        android:singleLine="true"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/ccc"
+        android:layout_alignTop="@+id/textView13"
+        android:layout_toRightOf="@+id/textView13" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color"
+        android:textSize="17sp"
+        android:layout_marginTop="5dp"
+        android:text="@string/mainPerson"
+        android:layout_alignRight="@+id/textView16"
+        android:layout_below="@+id/task_creater"
+        android:visibility="gone"
+        android:id="@+id/Main_Person_tag" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Main_Person"
+        android:textColor="@color/text_color"
+        android:textSize="17sp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/task_creater"
+        android:visibility="gone"
+        android:layout_toRightOf="@+id/Main_Person_tag" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/group_type"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/text_color"
+        android:layout_below="@+id/Main_Person"
+        android:layout_alignRight="@+id/textView16"
+        android:textSize="17sp"
+        android:id="@+id/textView8" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color"
+        android:textSize="17sp"
+        android:singleLine="true"
+        android:layout_toRightOf="@+id/textView8"
+        android:layout_alignTop="@+id/textView8"
+        android:id="@+id/task_group" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/target_group_tag"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/text_color"
+        android:layout_below="@+id/textView8"
+        android:visibility="gone"
+        android:layout_alignRight="@+id/textView16"
+        android:textSize="17sp"
+        android:id="@+id/target_group_tag" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color"
+        android:textSize="17sp"
+        android:visibility="gone"
+        android:singleLine="true"
+        android:layout_toRightOf="@+id/target_group_tag"
+        android:layout_alignTop="@+id/target_group_tag"
+        android:id="@+id/target_group" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color"
+        android:textSize="17sp"
+        android:text="@string/task_number"
+        android:id="@+id/ccc"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/task_ID" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color"
+        android:textSize="17sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:id="@+id/task_ID" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color"
+        android:textSize="17sp"
+        android:layout_marginTop="5dp"
+        android:text="@string/issue_time"
+        android:singleLine="true"
+        android:layout_below="@+id/target_group_tag"
+        android:layout_alignRight="@+id/textView16"
+        android:id="@+id/textView14" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color"
+        android:id="@+id/task_create_time"
+        android:textSize="17sp"
+        android:singleLine="true"
+        android:layout_alignTop="@+id/textView14"
+        android:layout_toRightOf="@+id/textView14" />
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/receive_time"
+        android:singleLine="true"
+        android:textColor="@color/text_color"
+        android:textSize="17sp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/textView14"
+        android:layout_alignRight="@+id/textView16" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color"
+        android:id="@+id/task_start_time"
+        android:textSize="17sp"
+        android:singleLine="true"
+        android:layout_alignTop="@+id/textView15"
+        android:layout_toRightOf="@+id/textView15" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color"
+        android:textSize="17sp"
+        android:layout_marginTop="5dp"
+        android:text="@string/task_descripbe"
+        android:layout_below="@+id/textView15" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color"
+        android:textSize="17sp"
+        android:id="@+id/task_description"
+        android:layout_alignTop="@+id/textView16"
+        android:layout_toRightOf="@+id/textView16"/>
+
+
+    <TextView
+        android:id="@+id/dynomic1_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color"
+        android:textSize="17sp"
+        android:layout_marginTop="5dp"
+        android:text="@string/task_descripbe"
+        android:layout_alignRight="@+id/textView16"
+        android:layout_below="@+id/task_description" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color"
+        android:textSize="17sp"
+        android:id="@+id/dynomic1_description"
+        android:layout_alignTop="@+id/dynomic1_tag"
+        android:layout_toRightOf="@+id/dynomic1_tag"/>
+
+    <TextView
+        android:id="@+id/dynomic2_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color"
+        android:textSize="17sp"
+        android:layout_marginTop="5dp"
+        android:text="@string/task_descripbe"
+        android:layout_alignRight="@+id/dynomic1_tag"
+        android:layout_below="@+id/dynomic1_tag" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color"
+        android:textSize="17sp"
+        android:id="@+id/dynomic2_description"
+        android:layout_alignTop="@+id/dynomic2_tag"
+        android:layout_toRightOf="@+id/dynomic2_tag"/>
+
+    <TextView
+        android:id="@+id/dynomic3_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/dynomic2_tag"
+        android:layout_below="@+id/dynomic2_tag"
+        android:layout_marginTop="3dp"
+        android:text="@string/task_descr"
+        android:textColor="@color/text_color"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/dynomic3_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color"
+        android:textSize="17sp"
+        android:layout_toRightOf="@id/dynomic3_tag"
+        android:layout_alignTop="@id/dynomic3_tag" />
+    <TextView
+        android:id="@+id/dynomic4_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/dynomic3_tag"
+        android:layout_below="@+id/dynomic3_tag"
+        android:layout_marginTop="3dp"
+        android:text="@string/task_descr"
+        android:textColor="@color/text_color"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/dynomic4_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color"
+        android:textSize="17sp"
+        android:layout_toRightOf="@id/dynomic3_tag"
+        android:layout_alignTop="@id/dynomic3_tag" />
+    <TextView
+        android:id="@+id/dynomic5_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/dynomic4_tag"
+        android:layout_below="@+id/dynomic4_tag"
+        android:layout_marginTop="3dp"
+        android:text="@string/task_descr"
+        android:textColor="@color/text_color"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/dynomic5_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color"
+        android:textSize="17sp"
+        android:layout_toRightOf="@id/dynomic4_tag"
+        android:layout_alignTop="@id/dynomic4_tag" />
+
+
+    <!-- 新增-->
+    <TextView
+        android:id="@+id/task_verify_person_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Approver"
+        android:textColor="@color/text_color"
+        android:textSize="17sp"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
+        android:layout_alignRight="@+id/dynomic5_description"
+        android:layout_below="@+id/dynomic5_description"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color"
+        android:id="@+id/task_verify_person"
+        android:textSize="17sp"
+        android:visibility="gone"
+        android:layout_alignTop="@+id/task_verify_person_tag"
+        android:layout_toRightOf="@+id/task_verify_person_tag" />
+    <TextView
+        android:id="@+id/task_verify_time_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ApproverTime"
+        android:textColor="@color/text_color"
+        android:textSize="17sp"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
+        android:layout_below="@+id/task_verify_person"
+        android:layout_alignRight="@+id/textView16" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color"
+        android:id="@+id/task_verify_time"
+        android:textSize="17sp"
+        android:visibility="gone"
+        android:layout_alignTop="@+id/task_verify_time_tag"
+        android:layout_toRightOf="@+id/task_verify_time_tag" />
+    <TextView
+        android:id="@+id/task_verify_reason_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ApproverReason"
+        android:textColor="@color/text_color"
+        android:textSize="17sp"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
+        android:layout_below="@+id/task_verify_time_tag"
+        android:layout_alignRight="@+id/textView16" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color"
+        android:id="@+id/task_verify_reason"
+        android:textSize="17sp"
+        android:visibility="gone"
+        android:layout_alignTop="@+id/task_verify_reason_tag"
+        android:layout_toRightOf="@+id/task_verify_reason_tag" />
+
+
+    <!-- -->
+</RelativeLayout>

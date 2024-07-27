@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="13dp"
+        android:background="@drawable/item_click"
+        android:paddingLeft="16dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp">
+
+        <TextView
+            android:id="@+id/id_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/Task_Equipment_Num_tag"
+            android:text="@string/grouptype"
+            android:textColor="@color/text_color"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/id_group"
+            android:textColor="@color/text_color"
+            android:textSize="17sp" />
+
+        <!--
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/id_num_device"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/device_num"
+            android:textColor="@color/text_color"
+            android:textSize="17sp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/id_group" />
+        <TextView
+            android:id="@+id/tv_device_num_process"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color"
+            android:text="0115"
+            android:layout_alignTop="@+id/id_num_device"
+            android:layout_toRightOf="@+id/id_num_device"
+            android:textSize="17sp"/>
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/id_device_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/device_name"
+            android:textColor="@color/text_color"
+            android:layout_below="@+id/id_num_device"
+            android:layout_alignParentLeft="true"
+            android:textSize="17sp"/>
+
+        <TextView
+            android:id="@+id/tv_device_name_procee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="平车"
+            android:textColor="@color/text_color"
+            android:layout_alignTop="@+id/id_device_name"
+            android:layout_toRightOf="@+id/id_device_name"
+            android:textSize="17sp"/>
+-->
+        <TextView
+            android:id="@+id/target_group_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/id_group"
+            android:layout_alignRight="@+id/Task_Equipment_Num_tag"
+            android:layout_marginTop="5dp"
+            android:text="@string/target_group_tag"
+            android:textColor="@color/text_color"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/target_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/target_group_tag"
+            android:layout_toRightOf="@+id/target_group_tag"
+            android:textColor="@color/text_color"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/Warranty_person_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/target_group_tag"
+            android:layout_alignRight="@+id/Task_Equipment_Num_tag"
+            android:layout_marginTop="5dp"
+            android:text="@string/warranty_person"
+            android:textColor="@color/text_color"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/Warranty_person"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/Warranty_person_tag"
+            android:layout_toRightOf="@+id/Warranty_person_tag"
+            android:textColor="@color/text_color"
+            android:textSize="17sp" />
+        <!--
+        <TextView
+            android:id="@+id/id_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/task_state"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/Warranty_person_tag"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/text_color"
+            android:textSize="17sp"/>
+
+        <TextView
+            android:id="@+id/tv_task_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="进行中 "
+            android:textColor="@color/text_color"
+            android:layout_toRightOf="@+id/id_status"
+            android:textSize="17sp"
+            android:layout_alignTop="@+id/id_status" />
+            -->
+        <TextView
+            android:id="@+id/id_Warranty_time_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Warranty_person_tag"
+            android:layout_alignRight="@+id/Task_Equipment_Num_tag"
+            android:layout_marginTop="5dp"
+            android:text="@string/repair_time"
+            android:textColor="@color/text_color"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_Warranty_time_process"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/id_Warranty_time_description"
+            android:layout_toRightOf="@+id/id_Warranty_time_description"
+            android:textColor="@color/text_color"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/id_start_time_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/id_Warranty_time_description"
+            android:layout_alignRight="@+id/Task_Equipment_Num_tag"
+            android:layout_marginTop="5dp"
+            android:singleLine="false"
+            android:text="@string/start_time"
+            android:textColor="@color/text_color"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_start_time_process"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/id_start_time_description"
+            android:layout_toRightOf="@+id/id_start_time_description"
+            android:textColor="@color/text_color"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/id_end_time_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/id_start_time_description"
+            android:layout_alignRight="@+id/Task_Equipment_Num_tag"
+            android:layout_marginTop="5dp"
+            android:singleLine="false"
+            android:text="@string/end_time"
+            android:textColor="@color/text_color"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_end_time_process"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/id_end_time_description"
+            android:layout_toRightOf="@+id/id_end_time_description"
+            android:textColor="@color/text_color"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/Task_Equipment_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/id_end_time_description"
+            android:layout_alignRight="@+id/Task_Equipment_Num_tag"
+            android:layout_marginTop="3dp"
+            android:text="@string/device_name"
+            android:textColor="@color/text_color"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/Task_Equipment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/Task_Equipment_tag"
+            android:layout_marginRight="40dp"
+            android:layout_toRightOf="@id/Task_Equipment_tag"
+            android:singleLine="false"
+            android:textColor="@color/text_color"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/Task_Equipment_Num_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Task_Equipment"
+            android:layout_marginTop="3dp"
+            android:text="@string/device_num"
+            android:textColor="@color/text_color"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/Task_Equipment_Num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/Task_Equipment_Num_tag"
+            android:layout_toRightOf="@id/Task_Equipment_Num_tag"
+            android:singleLine="false"
+            android:textColor="@color/text_color"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/id_task_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Task_Equipment_Num"
+            android:layout_alignRight="@+id/Task_Equipment_Num_tag"
+            android:layout_marginTop="5dp"
+            android:singleLine="false"
+            android:text="@string/task_descripbe"
+            android:textColor="@color/text_color"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_task_describe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/id_task_description"
+            android:layout_toRightOf="@+id/id_task_description"
+            android:paddingRight="15dp"
+            android:textColor="@color/text_color"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/dynomicp1_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_task_describe"
+            android:layout_alignRight="@+id/id_task_description"
+            android:layout_marginTop="3dp"
+            android:text="@string/task_descr"
+            android:textColor="@color/text_color"
+            android:singleLine="false"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/dynomicp1_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/dynomicp1_tag"
+            android:layout_toRightOf="@id/dynomicp1_tag"
+            android:textColor="@color/text_color"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/dynomicp2_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dynomicp1_tag"
+            android:layout_alignRight="@+id/dynomicp1_tag"
+            android:layout_marginTop="3dp"
+            android:text="@string/task_descr"
+            android:textColor="@color/text_color"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/dynomicp2_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/dynomicp2_tag"
+            android:layout_toRightOf="@id/dynomicp2_tag"
+            android:textColor="@color/text_color"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/dynomicp3_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dynomicp2_tag"
+            android:layout_alignRight="@+id/dynomicp2_tag"
+            android:layout_marginTop="3dp"
+            android:text="@string/task_descr"
+            android:textColor="@color/text_color"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/dynomicp3_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/dynomicp3_tag"
+            android:layout_toRightOf="@id/dynomicp3_tag"
+            android:textColor="@color/text_color"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/dynomicp4_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dynomicp3_tag"
+            android:layout_alignRight="@+id/dynomicp3_tag"
+            android:layout_marginTop="3dp"
+            android:text="@string/task_descr"
+            android:textColor="@color/text_color"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/dynomicp4_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/dynomicp3_tag"
+            android:layout_toRightOf="@id/dynomicp3_tag"
+            android:textColor="@color/text_color"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/dynomicp5_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dynomicp4_tag"
+            android:layout_alignRight="@+id/dynomicp4_tag"
+            android:layout_marginTop="3dp"
+            android:text="@string/task_descr"
+            android:textColor="@color/text_color"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/dynomicp5_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/dynomicp4_tag"
+            android:layout_toRightOf="@id/dynomicp4_tag"
+            android:textColor="@color/text_color"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/TaskOperatorStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dynomicp5_tag"
+            android:layout_alignRight="@+id/dynomicp5_tag"
+            android:layout_marginTop="3dp"
+            android:text="TaskOperatorStatus:"
+            android:textColor="@color/text_color"
+            android:singleLine="false"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_TaskOperatorStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/TaskOperatorStatus"
+            android:layout_toRightOf="@id/TaskOperatorStatus"
+            android:textColor="@color/pause_color"
+            android:text="TaskOperatorStatus"
+            android:textSize="17sp" />
+
+
+    </RelativeLayout>
+</RelativeLayout>

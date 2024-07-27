@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- create by Abrahamguo 2021-12-16 新增物料申请页面布局文件 -->
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/main_drawer_layout"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:drop="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_main">
+
+            <include
+                android:id="@+id/top_menu"
+                layout="@layout/toolbar" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/top_menu">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bg_main"
+                    android:id="@+id/layout"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical">
+
+                    <!-- 申请单创建人 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="30dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1.6"
+                            android:id="@+id/tvCreator"
+                            android:gravity="end"
+                            android:text="@string/creater"
+                            android:textColor="@color/text_color"
+                            android:textSize="18sp" />
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/edit_bg_shape"
+                                android:orientation="horizontal">
+
+                                <EditText
+                                    android:id="@+id/creator"
+                                    style="?android:attr/textViewStyle"
+                                    android:layout_width="0dip"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:height="40dip"
+                                    android:background="@null"
+                                    android:editable="false"
+                                    android:hint="@string/scan"
+                                    android:textColor="@color/text_color"
+                                    android:textColorHint="@color/hint_color"
+                                    android:textSize="18sp" />
+
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <!-- 所属部门 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="15dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_subordinate_departments"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1.6"
+                            android:gravity="end"
+                            android:text="@string/subordinate_departments"
+                            android:textColor="@color/text_color"
+                            android:textSize="18sp" />
+
+                        <com.emms.ui.DropEditText
+                            android:id="@+id/subordinate_departments_value"
+                            android:layout_width="0dp"
+                            android:minWidth="300dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            drop:drawableRight="@mipmap/drop_down"
+                            drop:dropMode="flow_parent"
+                            drop:hint="@string/select"
+                            drop:hintColor="@color/hint_color" />
+
+                    </LinearLayout>
+
+                    <!-- 申请类型 -->
+                    <LinearLayout
+                        android:id="@+id/linear_layout_hasEquipment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="15dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1.6"
+                            android:id="@+id/tvRequestType"
+                            android:gravity="end"
+                            android:text="@string/hasEquipment"
+                            android:textColor="@color/text_color"
+                            android:textSize="18sp" />
+
+                        <com.emms.ui.DropEditText
+                            android:id="@+id/request_type_value"
+                            android:layout_width="0dp"
+                            android:minWidth="300dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            drop:drawableRight="@mipmap/drop_down"
+                            drop:dropMode="flow_parent"
+                            drop:hint="@string/select"
+                            drop:hintColor="@color/hint_color" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="15dp"
+                        android:id="@+id/target_group_layout"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1.6"
+                            android:gravity="end"
+                            android:text="@string/manipulate"
+                            android:id="@+id/spare_part_choose"
+                            android:textColor="@color/text_color"
+                            android:textSize="18sp" />
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3">
+
+                            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <Button
+                                    android:layout_weight="1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="40dp"
+                                    android:background="#FCC900"
+                                    android:gravity="center"
+                                    android:id="@+id/btn_choose"
+                                    android:text="spare part choose"
+                                    android:textAllCaps="false"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/white"
+                                    />
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <!-- 所选备件 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="15dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvPartsListing"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1.6"
+
+                            android:gravity="end"
+                            android:text="备件列表："
+                            android:singleLine="true"
+                            android:textColor="@color/text_color"
+                            android:textSize="18sp" />
+                        <!--描述框-->
+                        <RelativeLayout
+                            android:id="@+id/task_description_layout"
+                            android:layout_width="0dp"
+                            android:layout_weight="3"
+                            android:layout_height="wrap_content"
+                            android:background="@color/bg_main"
+                            android:minHeight="150dp"
+                            >
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:orientation="horizontal"
+                                    android:id="@+id/table_header">
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="4"
+                                        android:gravity="center"
+                                        android:text="备件名称"
+                                        android:id="@+id/spare_part_selectName"
+                                        android:textColor="@color/text_color"
+                                        android:background="@drawable/wheel_val_black"
+                                        android:textSize="18sp" />
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center"
+                                        android:layout_weight="4"
+                                        android:text="备件类型"
+                                        android:id="@+id/spare_part_selectType"
+                                        android:textColor="@color/text_color"
+                                        android:background="@drawable/wheel_val_black"
+                                        android:textSize="18sp"/>
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:gravity="center"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="2"
+                                        android:text="数量"
+                                        android:id="@+id/spare_part_selectNum"
+                                        android:background="@drawable/wheel_val_black"
+                                        android:textColor="@color/text_color"
+                                        android:textSize="18sp"/>
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:orientation="horizontal"
+                                    android:id="@+id/table_fill">
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="4"
+                                        android:gravity="center"
+                                        android:text=""
+                                        android:textColor="@color/text_color"
+                                        android:background="@drawable/wheel_val_black"
+                                        android:textSize="18sp" />
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center"
+                                        android:layout_weight="4"
+                                        android:text=""
+                                        android:textColor="@color/text_color"
+                                        android:background="@drawable/wheel_val_black"
+                                        android:textSize="18sp"/>
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:gravity="center"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="2"
+                                        android:text=""
+                                        android:background="@drawable/wheel_val_black"
+                                        android:textColor="@color/text_color"
+                                        android:textSize="18sp"/>
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/spare_part_list"
+                                    android:orientation="vertical">
+                                </LinearLayout>
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <!--提交按钮-->
+                    <Button
+                        android:id="@+id/sure"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@color/yellow"
+                        android:padding="2dp"
+                        android:text="@string/warning_message_confirm"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        android:textSize="22sp" />
+                </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+    </FrameLayout>
+
+    <include layout="@layout/activity_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"/>
+</android.support.v4.widget.DrawerLayout>

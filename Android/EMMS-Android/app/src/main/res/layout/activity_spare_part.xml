@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/main_drawer_layout"
+    xmlns:drop="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <include layout="@layout/toolbar"></include>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+                        <ListView
+                            android:layout_weight="3"
+                            android:id="@+id/group_list"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal">
+                        </ListView>
+                        <View
+                            android:layout_height="match_parent"
+                            android:layout_width="5dp">
+
+                        </View>
+                        <View
+                            android:layout_height="match_parent"
+                            android:layout_width="1dp"
+                            android:background="#DFDFDF">
+
+                        </View>
+                        <View
+                            android:layout_height="match_parent"
+                            android:layout_width="5dp">
+
+                        </View>
+                        <com.handmark.pulltorefresh.library.PullToRefreshListView
+                            android:layout_weight="7"
+                            android:id="@+id/id_wait_list"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal">
+                        </com.handmark.pulltorefresh.library.PullToRefreshListView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="bottom"
+                        android:orientation="horizontal">
+                        <Button
+                            android:id="@+id/summit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:layout_weight="1"
+                            android:background="@color/main_color"
+                            android:textColor="@android:color/white"
+                            android:text="@string/machine_submit"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/toolbar"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:id="@+id/search_filter"
+                    android:visibility="invisible"
+                    android:background="@color/white">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="18dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1.6"
+                            android:id="@+id/tvSparePartName"
+                            android:gravity="end"
+                            android:text="@string/equipment_name"
+                            android:textColor="@color/text_color"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/spare_part_name"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:padding="8dp"
+                            android:textColor="@color/text_color"
+                            android:background="@drawable/bg_edit_normal"
+                            android:hint="@string/pleaseInput"
+                            android:textColorHint="@color/hint_color" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1.6"
+                            android:id="@+id/tvSparePartBrand"
+                            android:gravity="end"
+                            android:text="@string/equipment_num"
+                            android:textColor="@color/text_color"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/spare_part_brand"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:padding="8dp"
+                            android:textColor="@color/text_color"
+                            android:background="@drawable/bg_edit_normal"
+                            android:hint="@string/pleaseInput"
+                            android:textColorHint="@color/hint_color"  />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1.6"
+                            android:id="@+id/tvSparePartType"
+                            android:gravity="end"
+                            android:text="@string/equipment_num"
+                            android:textColor="@color/text_color"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/spare_part_type"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:padding="8dp"
+                            android:textColor="@color/text_color"
+                            android:background="@drawable/bg_edit_normal"
+                            android:hint="@string/pleaseInput"
+                            android:textColorHint="@color/hint_color"  />
+
+                    </LinearLayout>
+
+                    <!--二维码-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_SparePart_code"
+                            android:layout_width="0dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1.6"
+                            android:gravity="end"
+                            android:text="@string/qrcode_id"
+                            android:textColor="@color/text_color"
+                            android:textSize="18sp" />
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3">
+
+                            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bg_edit_normal"
+                                android:orientation="horizontal">
+
+                                <EditText
+                                    android:id="@+id/et_SparePart_code"
+                                    style="?android:attr/textViewStyle"
+                                    android:layout_width="0dip"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:height="40dip"
+                                    android:padding="8dp"
+                                    android:background="@null"
+                                    android:hint="@string/scan"
+                                    android:textColor="@color/text_color"
+                                    android:textColorHint="@color/hint_color"
+                                    android:textSize="18sp" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginBottom="2dip"
+                                    android:layout_marginRight="8dp"
+                                    android:layout_marginTop="2dip"
+                                    android:paddingRight="2dip"
+                                    android:src="@mipmap/scan" />
+
+                            </LinearLayout>
+
+                            <ImageView
+                                android:id="@+id/spare_part_code_action"
+                                android:layout_width="43dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentRight="true"
+                                android:background="@color/transparent"
+                                android:contentDescription="@null" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="18dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1.6"
+                            android:id="@+id/tvSparePartQuantity"
+                            android:gravity="end"
+                            android:text="@string/equipment_name"
+                            android:textColor="@color/text_color"
+                            android:textSize="18sp" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:background="@drawable/bg_edit_normal">
+                            <TextView
+                                android:layout_width="40dp"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:gravity="center"
+                                android:text="＞"
+                                android:textSize="18dp"
+                                android:background="@drawable/bg_edit_normal"
+                                android:height="40dp"
+                                android:textColor="@color/text_color"
+                                android:hint="@string/pleaseInput" />
+
+                            <EditText
+                                android:id="@+id/spare_part_quantity"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="3"
+                                android:text=""
+                                android:gravity="end"
+                                android:inputType="number"
+                                android:padding="8dp"
+                                android:textColor="@color/text_color"
+                                android:background="@drawable/bg_edit_normal"
+                                android:hint="@string/pleaseInput"
+                                android:maxLength="3"
+                                android:textColorHint="@color/hint_color" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1.6"
+                            android:id="@+id/tvSparePartWareHouse"
+                            android:gravity="end"
+                            android:text="@string/equipment_num"
+                            android:textColor="@color/text_color"
+                            android:textSize="18sp" />
+
+                        <com.emms.ui.DropEditText
+                            android:id="@+id/WareHouse"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            drop:drawableRight="@mipmap/drop_down"
+                            drop:dropMode="flow_parent"
+                            drop:hint="@string/select"
+                            drop:hintColor="@color/hint_color" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#EDEDED"
+                        />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/sure"
+                            android:id="@+id/search_button"
+                            android:background="@color/white"
+                            android:textAllCaps="false"
+                            android:textColor="@color/esquel_red"
+                            android:layout_toLeftOf="@+id/divider"
+                            android:textSize="18sp"
+                            android:padding="15dp"/>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/search_button"
+                            android:layout_centerHorizontal="true"
+                            android:background="#EDEDED"
+                            android:id="@+id/divider"/>
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Reset"
+                            android:id="@+id/reset_button"
+                            android:layout_toRightOf="@+id/divider"
+                            android:background="@color/white"
+                            android:textAllCaps="false"
+                            android:textColor="@color/esquel_red"
+                            android:textSize="18sp"
+                            android:padding="15dp"/>
+                    </RelativeLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#EDEDED"
+                        />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <include layout="@layout/activity_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"/>
+
+</android.support.v4.widget.DrawerLayout>

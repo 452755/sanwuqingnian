@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
+        android:paddingTop="8dp">
+
+        <TextView
+            android:id="@+id/tv_orderno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="orderNo:"
+            android:textColor="@color/text_color"
+            android:textSize="17sp"
+            android:paddingRight="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_orderno_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="XXXXXX"
+            android:textColor="@color/text_color"
+            android:textSize="17sp"
+            android:layout_toRightOf="@+id/tv_orderno"/>
+    </RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
+        android:paddingTop="8dp">
+
+        <TextView
+            android:id="@+id/tv_jo_closedate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="JO close date:"
+            android:textColor="@color/text_color"
+            android:textSize="17sp"
+            android:paddingRight="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_closedate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="XXXXXX"
+            android:textColor="@color/text_color"
+            android:textSize="17sp"
+            android:layout_toRightOf="@+id/tv_jo_closedate"/>
+    </RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
+        android:paddingTop="8dp">
+
+        <TextView
+            android:id="@+id/tv_type_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Type"
+            android:textColor="@color/text_color"
+            android:textSize="17sp"
+            android:paddingRight="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_type_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="XXXXXX"
+            android:textColor="@color/text_color"
+            android:textSize="17sp"
+            android:layout_toRightOf="@+id/tv_type_label"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
+        android:paddingTop="8dp">
+
+        <TextView
+            android:id="@+id/tv_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Operation"
+            android:textColor="@color/text_color"
+            android:textSize="17sp"
+            android:paddingRight="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="XXXXXX"
+            android:textColor="@color/text_color"
+            android:textSize="17sp"
+            android:layout_toRightOf="@+id/tv_label"/>
+    </RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/rl_attcement_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
+        android:paddingTop="8dp">
+
+        <TextView
+            android:id="@+id/tv_attcement_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textColor="@color/text_color"
+            android:textSize="17sp"
+            android:paddingRight="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_attcement_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="XXXXXX"
+            android:textColor="@color/text_color"
+            android:textSize="17sp"
+            android:layout_toRightOf="@+id/tv_attcement_label"/>
+    </RelativeLayout>
+
+    <com.smartown.tableview.library.TableView
+        android:id="@+id/table"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="8dp"
+        app:dividerColor="#000000"
+        app:dividerWidth="1px"
+        app:headerColor="#00ffffff"
+        app:headerTextColor="#000000"
+        app:headerTextSize="13dp"
+        app:rowHeight="36dp"
+        app:textColor="#000000"
+        app:textSize="13dp"
+        app:unitColumnWidth="0dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3px"
+        android:background="@color/black"
+        android:layout_margin="10dp"
+        >
+
+    </View>
+</LinearLayout>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.emms.ui.CustomDrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:drop="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/search_page"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <include layout="@layout/toolbar"></include>
+
+            <RelativeLayout
+                android:id="@+id/aaaa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp">
+
+                <LinearLayout
+                    android:id="@+id/bbbb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/factory_tag"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="1.2"
+                        android:gravity="end"
+                        android:text="@string/factory"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <com.emms.ui.DropEditText
+                        android:id="@+id/factory"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/factory_tag"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@+id/factory_tag"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/factory_tag"
+                        android:layout_weight="3"
+                        drop:drawableRight="@mipmap/drop_down"
+                        drop:dropMode="flow_parent"
+                        drop:hint="@string/select"
+                        drop:hintColor="@color/hint_color" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/cccc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/bbbb"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="38dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/NetWork_tag"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="1.2"
+                        android:gravity="end"
+                        android:text="@string/network"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <com.emms.ui.DropEditText
+                        android:id="@+id/NetWork"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/NetWork_tag"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@+id/NetWork_tag"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/NetWork_tag"
+                        android:layout_weight="3"
+                        drop:drawableRight="@mipmap/drop_down"
+                        drop:dropMode="flow_parent"
+                        drop:hint="@string/select"
+                        drop:hintColor="@color/hint_color" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dddd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cccc"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="38dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/Language_tag"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="1.2"
+                        android:gravity="end"
+                        android:text="@string/LanguageSetting"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <com.emms.ui.DropEditText
+                        android:id="@+id/Language"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/NetWork_tag"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@+id/NetWork_tag"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/NetWork_tag"
+                        android:layout_weight="3"
+                        drop:drawableRight="@mipmap/drop_down"
+                        drop:dropMode="flow_parent"
+                        drop:hint="@string/select"
+                        drop:hintColor="@color/hint_color" />
+                </LinearLayout>
+                <!--<RelativeLayout-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@+id/dddd"-->
+                <!--android:layout_alignParentBottom="true"-->
+                <!--android:layout_marginBottom="20dp">-->
+                <!--<Button-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:background="#FCC900"-->
+                <!--android:gravity="center"-->
+                <!--android:id="@+id/comfirm"-->
+                <!--android:text="@string/sure"-->
+                <!--android:textSize="23sp"-->
+                <!--android:textColor="@color/white"-->
+                <!--android:layout_marginLeft="20dp"-->
+                <!--android:layout_marginRight="20dp"-->
+                <!--android:layout_marginBottom="20dp"-->
+                <!--android:layout_marginTop="20dp"-->
+                <!--android:layout_alignParentBottom="true"-->
+                <!--/>-->
+                <!--</RelativeLayout>-->
+            </RelativeLayout>
+
+        </LinearLayout>
+    </FrameLayout>
+    <include layout="@layout/activity_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"/>
+</com.emms.ui.CustomDrawerLayout>

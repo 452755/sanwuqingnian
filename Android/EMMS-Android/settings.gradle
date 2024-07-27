@@ -1,0 +1,2 @@
+include ':app', ':datastore_android_sdk', ':FlycoTabLayout_Lib', ':PullToRefresh', ':universal-image-loader', ':TableViewModule'
+project(':TableViewModule').projectDir = new File('TableView')

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="select_tab_status">
+        <item>处理中</item>
+        <item>待接单</item>
+        <item>已结单</item>
+    </string-array>
+    <string-array name="select_tab_task_history">
+        <item>待评价</item>
+        <item>所有任务</item>
+        <item>任务筛选</item>
+    </string-array>
+    <string-array name="select_tab_verify_status">
+        <item>未核验</item>
+        <item>已核验</item>
+        <item>条件查询</item>
+    </string-array>
+    <string-array name="select_tab_time">
+        <item>1个月内</item>
+        <item>2个月内</item>
+        <item>3个月内</item>
+    </string-array>
+    <string-array name="menu_list">
+        <item>发起新任务</item>
+        <item>扫二维码</item>
+        <item>故障总结</item>
+        <item>子任务管理</item>
+        <item>邀请协助</item>
+        <item>转单</item>
+        <item>完成任务</item>
+        <item>刷新</item>
+    </string-array>
+    <string-array name="menu_list_group_arrange">
+        <item>发起新任务</item>
+        <item>扫二维码</item>
+        <item>工作量录入</item>
+        <item>子任务管理</item>
+        <item>邀请协助</item>
+        <item>转单</item>
+        <item>完成任务</item>
+        <item>刷新</item>
+    </string-array>
+    <string-array name="menu_list_maintain">
+        <item>发起新任务</item>
+        <item>扫二维码</item>
+        <item>工作量录入</item>
+        <item>子任务管理</item>
+        <item>邀请协助</item>
+        <item>转单</item>
+        <item>完成任务</item>
+        <item>刷新</item>
+    </string-array>
+    <string-array name="menu_list_move_car">
+        <item>发起新任务</item>
+        <item>扫二维码</item>
+        <item>邀请协助</item>
+        <item>转单</item>
+        <item>完成任务</item>
+        <item>刷新</item>
+    </string-array>
+    <string-array name="menu_list_transfer_model">
+        <item>发起新任务</item>
+        <item>扫二维码</item>
+        <item>邀请协助</item>
+        <item>转单</item>
+        <item>完成任务</item>
+        <item>刷新</item>
+    </string-array>
+
+    <string-array name="menu_login">
+        <item>设置</item>
+        <item>绑定设备</item>
+    </string-array>
+    <string-array name="Equipment_Status">
+        <item>处理中</item>
+        <item>暂停</item>
+        <item>完成</item>
+    </string-array>
+    <string-array name="Equipment_Operator_Status">
+        <item>处理中</item>
+        <item>暂停</item>
+        <item>完成</item>
+    </string-array>
+</resources>

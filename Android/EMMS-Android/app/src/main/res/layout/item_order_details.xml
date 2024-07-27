@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/rl_equipment"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="16dp"
+        android:layout_marginTop="13dp"
+        android:background="@color/click_item"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp">
+        <TextView
+            android:id="@+id/id_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color"
+            android:text="@string/device_num"
+            android:layout_alignRight="@+id/id_status"
+            android:textSize="17sp"/>
+        <TextView
+            android:id="@+id/tv_device_num_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color"
+            android:layout_toRightOf="@id/id_group"
+            android:text="0115"
+            android:textSize="17sp"/>
+        <TextView
+            android:id="@+id/id_num_device"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/device_name"
+            android:textColor="@color/text_color"
+            android:textSize="17sp"
+            android:layout_below="@+id/id_group"
+            android:layout_alignRight="@+id/id_status"
+            />
+        <TextView
+            android:id="@+id/tv_device_name_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color"
+            android:text="平车"
+            android:textSize="17sp"
+            android:layout_alignTop="@+id/id_num_device"
+            android:layout_toRightOf="@+id/id_num_device"
+            android:layout_toEndOf="@+id/id_num_device" />
+
+        <TextView
+            android:id="@+id/id_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/equipment_status"
+            android:textColor="@color/text_color"
+            android:layout_marginTop="5dp"
+            android:textSize="17sp"
+            android:layout_below="@+id/id_end_time_description"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:id="@+id/tv_task_state_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="未执行 "
+            android:textColor="@color/pause_color"
+            android:textSize="17sp"
+            android:layout_alignTop="@+id/id_status"
+            android:layout_toRightOf="@+id/id_status"
+            android:layout_toEndOf="@+id/id_status" />
+
+        <TextView
+            android:id="@+id/id_start_time_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/start_time"
+            android:textColor="@color/text_color"
+            android:textSize="17sp"
+            android:layout_below="@+id/tv_device_name_details"
+            android:layout_alignRight="@+id/id_status"
+            />
+
+        <TextView
+            android:id="@+id/tv_start_time_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2016.05.05 10:23 "
+            android:singleLine="true"
+            android:textColor="@color/text_color"
+            android:layout_alignTop="@+id/id_start_time_description"
+            android:layout_toRightOf="@+id/id_start_time_description"
+            android:textSize="17sp"/>
+
+        <TextView
+            android:id="@+id/id_end_time_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/end_time"
+            android:textColor="@color/text_color"
+            android:layout_below="@+id/id_start_time_description"
+            android:layout_alignRight="@+id/id_status"
+            android:textSize="17sp"/>
+
+        <TextView
+            android:id="@+id/tv_end_time_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2016.05.05 10:22 "
+            android:singleLine="true"
+            android:textColor="@color/text_color"
+            android:layout_alignTop="@+id/id_end_time_description"
+            android:layout_toRightOf="@+id/id_end_time_description"
+            android:textSize="17sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:textColor="@color/text_color"
+            android:text="@string/participant"
+            android:id="@+id/textView20"
+            android:layout_marginTop="5dp"
+            android:layout_alignRight="@+id/id_status"
+            android:layout_below="@+id/id_status"/>
+
+        <LinearLayout
+            android:id="@+id/ll_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toRightOf="@+id/textView20"
+            android:layout_alignTop="@+id/textView20"
+            android:layout_below="@+id/id_status"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color"
+                android:text=""
+                android:textSize="17sp"
+                android:id="@+id/id_participant"
+                android:paddingRight="30dp"
+                android:visibility="gone"
+                />
+
+            <com.emms.ui.MyListView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/equipment_opeartor_list"
+                android:divider="@null"
+                >
+            </com.emms.ui.MyListView>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:textColor="@color/text_color"
+            android:text="@string/participant"
+            android:id="@+id/tv_move_from"
+            android:layout_marginTop="5dp"
+            android:layout_alignRight="@+id/id_status"
+            android:layout_below="@+id/tv_oracleID"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color"
+            android:text=""
+            android:textSize="17sp"
+            android:id="@+id/tv_movefrom"
+            android:paddingRight="30dp"
+            android:layout_toRightOf="@+id/tv_move_from"
+            android:layout_alignTop="@+id/tv_move_from"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:textColor="@color/text_color"
+            android:text="@string/machine_oracle_id"
+            android:id="@+id/tv_oracleID"
+            android:layout_alignRight="@+id/id_status"
+            android:layout_alignTop="@+id/tv_oracleID_input"
+            android:layout_below="@+id/ll_test"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color"
+            android:text=""
+            android:textSize="17sp"
+            android:id="@+id/tv_oracleID_input"
+            android:paddingRight="30dp"
+            android:layout_toRightOf="@+id/tv_oracleID"
+            android:layout_below="@+id/ll_test"
+            android:visibility="visible"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:textColor="@color/text_color"
+            android:text="@string/participant"
+            android:id="@+id/tv_using_department"
+            android:layout_marginTop="5dp"
+            android:layout_alignRight="@+id/id_status"
+            android:layout_below="@+id/tv_move_from"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color"
+            android:text=""
+            android:textSize="17sp"
+            android:id="@+id/tv_using_department_input"
+            android:paddingRight="30dp"
+            android:layout_toRightOf="@+id/tv_using_department"
+            android:layout_alignTop="@+id/tv_using_department"
+            android:visibility="visible"
+            />
+        <!--kingzhang for srf 2022-0106-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:textColor="@color/text_color"
+            android:text="附件配件:"
+            android:id="@+id/tv_Accessories"
+            android:layout_marginTop="5dp"
+            android:layout_alignRight="@+id/tv_using_department"
+            android:layout_below="@+id/tv_using_department"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            />
+
+        <EditText
+            android:layout_width="150dip"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color"
+            android:text=""
+            android:textSize="17sp"
+            android:id="@+id/tv_Accessories_input"
+            android:paddingRight="30dp"
+            android:layout_toRightOf="@+id/tv_Accessories"
+            android:layout_alignTop="@+id/tv_Accessories"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            android:background="#FFFFFF"
+            android:textColorHint="@color/hint_color"
+            android:selectAllOnFocus="true"
+            android:imeOptions="actionSend"
+            android:singleLine="true"
+            android:inputType="text"
+            />
+
+    </RelativeLayout>
+</RelativeLayout>
