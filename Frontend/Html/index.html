@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script src="xlsx.full.min.js"></script>
+</head>
+<body>
+    <div id="demo">
+        <input type="file" onChange="app.importFile(event)" id="imFile"
+            accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"/>
+    </div>
+    <script>
+        const app = {	
+        importFile: function(e){
+            let imFile = document.getElementById('imFile');
+            let f = imFile.files[0];
+            // 调用FileReader读取文件
+            let reader = new FileReader();
+            reader.onload = function (e) {
+                let data = e.target.result;
+                let workbook = XLSX.read(data, {
+                    type: 'binary'
+                })
+                console.log('workbook:', workbook);
+                /*
+                    workbook数据结构
+                    {
+                       SheetNames['sheet1', 'sheet2'],
+                       Sheets:{
+                           'sheet1':{...},
+                           'sheet2':{...},
+                       }
+                    }
+                */
+                let json = XLSX.utils.sheet_to_json(workbook.Sheets[workbook.SheetNames[0]]);
+                console.log('json:', json);
+                /*
+                    json数据结构
+                    [
+                        { A:"S", B:"h", C:"e", D:"e", E:"t", F:"J", G:"S" },
+                        { A: 1,  B: 2,  C: 3,  D: 4,  E: 5,  F: 6,  G: 7  },
+                        { A: 2,  B: 3,  C: 4,  D: 5,  E: 6,  F: 7,  G: 8  }
+                    ]
+                */
+            }
+            reader.readAsBinaryString(f);
+
+        }
+    }
+    </script>
+</body>
+</html>
