@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="CircularButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Customize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GameAboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ThunderBlock.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Tutorials.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="GameForm.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
