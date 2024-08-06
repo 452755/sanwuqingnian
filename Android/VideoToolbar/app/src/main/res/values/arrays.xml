@@ -1,0 +1,6 @@
+<resources>
+    <string-array name="marker_positions">
+        <item>屏幕左侧</item>
+        <item>屏幕右侧</item>
+    </string-array>
+</resources>
