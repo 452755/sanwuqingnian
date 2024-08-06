@@ -1,0 +1,29 @@
+{
+    "name": "mqtt-demo",
+    "version": "1.0.4",
+    "description": "MQTT.js 的使用示例",
+    "main": "main.js",
+    "dependencies": {
+        "mqtt": "^3.0.0"
+    },
+    "devDependencies": {
+        "npm-pack-zip": "^1.3.0"
+    },
+    "scripts": {
+        "pack": "npm-pack-zip"
+    },
+    "author": "",
+    "license": "ISC",
+    "id": "mqtt-demo",
+    "displayName": "mqtt-demo",
+    "keywords": [
+        "mqtt",
+        "websocket"
+    ],
+    "dcloudext": {
+        "category": [
+            "uni-app前端模板",
+            "uni-app前端项目模板"
+        ]
+    }
+}
