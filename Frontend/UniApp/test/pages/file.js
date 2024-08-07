@@ -1,73 +1,81 @@
 import JSZip from 'jszip';
 
 /**
+ * 文件处理回调方法
+ * @callback FileCallback
+ * @param {FileInfo} fileInfo - 文件信息对象
+ * @returns {void}
+ */
+
+/**
+ * @typedef {Object} FileInfo
+ * @property {string} content - 文件内容 base64 格式字符串
+ * @property {number} size - 文件大小
+ * @property {string} name - 文件名称
+ */
+
+/**
  * 压缩文件处理
  * @param {Blob|ArrayBuffer} zipFileStream - 压缩文件流，类型可以是 Blob 或 ArrayBuffer
- * @param {boolean} [directSave=false] - 是否直接保存文件
- * @returns {Promise<Array<{fileName: string, length: number, relativePath: string, blob: Blob}>>} - 返回一个 Promise，该 Promise 解析为一个包含文件信息对象的数组
+ * @param {FileCallback} unZipFileCallback - 解析出来每一个文件的内容
+ * @param {function} callback - 一个回调方法，接受一个文件信息对象作为参数
+ * @param {Object} unZipFileCallback.fileInfo - 文件信息对象
+ * @param {string} unZipFileCallback.fileInfo.content - 文件内容
+ * @param {number} unZipFileCallback.fileInfo.size - 文件大小
+ * @param {string} unZipFileCallback.fileInfo.type - 文件类型
  */
-export function zipHandler(zipFileStream, directSave = false) {
-	return JSZip.loadAsync(zipFileStream).then((zip) => {
-		console.log('Zip file loaded:', zip);
+export function zipHandler(zipFileStream, unZipFileCallback) {
+	JSZip.loadAsync(zipFileStream).then((zip) => {
+		console.log('Zip file loaded');
 		
 		const fileContentPromises = [];
 		zip.forEach((relativePath, zipEntry) => {
-			const filePromise = zipEntry.async('blob').then((content) => {
+			const filePromise = zipEntry.async('base64').then((content) => {
 				const file = {
-					fileName: zipEntry.name,
-					length: content.size,
-					blob: content,
+					name: zipEntry.name,
+					content: content,
 					relativePath: relativePath,
-				};
-				
-				if (directSave) {
-					saveFile(zipEntry.name, file.blob);
+					size: zipEntry._data.uncompressedSize
 				}
 				
-				return file;
+				console.log(file.name, file.length)
+				
+				saveFileToLocal(zipEntry.name, content);
+				if (unZipFileCallback) {
+					unZipFileCallback(file)
+				}
+			}).catch((err) => {
+				console.error('Error processing zip file:', zipEntry.name, err);
 			});
 		});
-		
-		return Promise.all(fileContentPromises);
 	}).catch((err) => {
 		console.error('Error processing zip file:', err)
-		throw err;
 	});
 }
 
 /**
- * 压缩文件处理
- * @param {Blob|ArrayBuffer} zipFileStream
- * @returns {Promise}
+ * @param {string} filename
+ * @param {stirng} content
  */
-export function saveFile(fileName, blob) {
-    return new Promise((resolve, reject) => {
-		console.log(fileName)
-        const trimmedFileName = fileName.split('/').pop();
-        const fileReader = new FileReader();
-
-        fileReader.onload = (event) => {
-			const arrayBuffer = event.target.result;
-
-			// 获取文件系统路径
-			const fs = uni.getFileSystemManager();
-			const savePath = `${uni.env.USER_DATA_PATH}/${trimmedFileName}`;
-
-			// 写入文件
-			fs.writeFile({
-				filePath: savePath,
-				data: arrayBuffer,
-				encoding: 'binary',
-				success: () => {
-					resolve();
-				},
-				fail: (error) => {
-					console.error('保存文件失败:', error);
-					reject(error);
-				}
+function saveFileToLocal(filename, content) {
+    plus.io.requestFileSystem(plus.io.RelativeURL, (fs) => {
+        fs.root.getFile(filename, { create: true }, (fileEntry) => {
+			fileEntry.createWriter((writer) => {
+				writer.onwriteend = () => {
+					console.log('File saved successfully:', filename);
+					// this.readFileFromLocal(filename);
+				};
+				writer.onerror = (e) => {
+					console.error('Failed to save file:', e);
+				};
+				writer.writeAsBinary(content);
+			}, (e) => {
+				console.error('Failed to create writer:', e);
 			});
-        };
-
-        fileReader.readAsArrayBuffer(blob);
+		}, (e) => {
+			console.error('Failed to get file:', e);
+		});
+    }, (e) => {
+        console.error('Failed to request file system:', e);
     });
 }

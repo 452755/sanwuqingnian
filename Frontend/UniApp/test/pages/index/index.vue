@@ -32,17 +32,9 @@
 		  method: 'POST',
 		  data: {}
 		}).then((res) => {
-		  // 将 arraybuffer 转换为 blob 对象
-		  const blob = new Blob([res.data], { type: 'application/zip' });
-
-		  zipHandler(blob, true)
-			.then((res) => {
-			  console.log(res)
-			}).catch((err) => {
-				console.log(err)
-			})
+		  zipHandler(res.data)
 		}).catch((err) => {
-				console.error('Error loading zip file:', err);
+			console.error('Error loading zip file:', err);
 		});
 	  },
 	  methods: {

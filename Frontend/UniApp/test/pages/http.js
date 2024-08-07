@@ -10,7 +10,7 @@ export const PostRequest = (options) => {
 
 	return new Promise((resolve, reject) => {
 		uni.request({
-			url: 'http://192.168.31.45:9993/TzxRestFulServer/' + options.url,
+			url: 'http://192.168.31.45:19808/TzxRestFulServer/' + options.url,
 			method: 'POST',
 			data: options.data || {},
 			header: {
@@ -41,7 +41,7 @@ export const GetRequest = (options) => {
 
 	return new Promise((resolve, reject) => {
 		uni.request({
-			url: 'http://192.168.31.45:9993/TzxRestFulServer/' + options.url,
+			url: 'http://192.168.31.45:19808/TzxRestFulServer/' + options.url,
 			method: 'GET',
 			data: options.data || {},
 			header: {
@@ -61,7 +61,7 @@ export const GetRequest = (options) => {
 export const DownLoadFile = (options) => {
 	return new Promise((resolve, reject) => {
 		uni.request({
-			url: 'http://192.168.31.45:9993/TzxRestFulServer/' + options.url,
+			url: 'http://192.168.31.45:19808/TzxRestFulServer/' + options.url,
 			method: options.method,
 			data: options.data || {},
 			header: {
