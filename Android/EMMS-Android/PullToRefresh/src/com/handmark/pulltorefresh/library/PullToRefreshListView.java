@@ -36,7 +36,7 @@ import com.handmark.pulltorefresh.library.internal.AdapterOnSlideListener;
 import com.handmark.pulltorefresh.library.internal.EmptyViewMethodAccessor;
 import com.handmark.pulltorefresh.library.internal.LoadingLayout;
 
-import org.apache.http.conn.routing.RouteInfo;
+// import org.apache.http.conn.routing.RouteInfo;
 
 public class PullToRefreshListView extends PullToRefreshAdapterViewBase<ListView> {
 

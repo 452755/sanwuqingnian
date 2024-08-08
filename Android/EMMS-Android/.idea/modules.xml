@@ -2,13 +2,31 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/EMMS-Android.iml" filepath="$PROJECT_DIR$/EMMS-Android.iml" />
-      <module fileurl="file://$PROJECT_DIR$/FlycoTabLayout_Lib/FlycoTabLayout_Lib.iml" filepath="$PROJECT_DIR$/FlycoTabLayout_Lib/FlycoTabLayout_Lib.iml" />
-      <module fileurl="file://$PROJECT_DIR$/PullToRefresh/PullToRefresh.iml" filepath="$PROJECT_DIR$/PullToRefresh/PullToRefresh.iml" />
-      <module fileurl="file://$PROJECT_DIR$/TableView/TableViewModule.iml" filepath="$PROJECT_DIR$/TableView/TableViewModule.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/datastore_android_sdk/datastore_android_sdk.iml" filepath="$PROJECT_DIR$/datastore_android_sdk/datastore_android_sdk.iml" />
-      <module fileurl="file://$PROJECT_DIR$/universal-image-loader/universal-image-loader.iml" filepath="$PROJECT_DIR$/universal-image-loader/universal-image-loader.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/EMMS-Android.iml" filepath="$PROJECT_DIR$/.idea/modules/EMMS-Android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/FlycoTabLayout_Lib/EMMS-Android.FlycoTabLayout_Lib.iml" filepath="$PROJECT_DIR$/.idea/modules/FlycoTabLayout_Lib/EMMS-Android.FlycoTabLayout_Lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/FlycoTabLayout_Lib/EMMS-Android.FlycoTabLayout_Lib.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/FlycoTabLayout_Lib/EMMS-Android.FlycoTabLayout_Lib.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/FlycoTabLayout_Lib/EMMS-Android.FlycoTabLayout_Lib.main.iml" filepath="$PROJECT_DIR$/.idea/modules/FlycoTabLayout_Lib/EMMS-Android.FlycoTabLayout_Lib.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/FlycoTabLayout_Lib/EMMS-Android.FlycoTabLayout_Lib.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/FlycoTabLayout_Lib/EMMS-Android.FlycoTabLayout_Lib.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PullToRefresh/EMMS-Android.PullToRefresh.iml" filepath="$PROJECT_DIR$/.idea/modules/PullToRefresh/EMMS-Android.PullToRefresh.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PullToRefresh/EMMS-Android.PullToRefresh.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/PullToRefresh/EMMS-Android.PullToRefresh.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PullToRefresh/EMMS-Android.PullToRefresh.main.iml" filepath="$PROJECT_DIR$/.idea/modules/PullToRefresh/EMMS-Android.PullToRefresh.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PullToRefresh/EMMS-Android.PullToRefresh.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/PullToRefresh/EMMS-Android.PullToRefresh.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TableView/EMMS-Android.TableViewModule.iml" filepath="$PROJECT_DIR$/.idea/modules/TableView/EMMS-Android.TableViewModule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TableView/EMMS-Android.TableViewModule.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/TableView/EMMS-Android.TableViewModule.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TableView/EMMS-Android.TableViewModule.main.iml" filepath="$PROJECT_DIR$/.idea/modules/TableView/EMMS-Android.TableViewModule.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TableView/EMMS-Android.TableViewModule.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/TableView/EMMS-Android.TableViewModule.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/EMMS-Android.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/EMMS-Android.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/EMMS-Android.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/EMMS-Android.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/EMMS-Android.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/EMMS-Android.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/EMMS-Android.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/EMMS-Android.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/datastore_android_sdk/EMMS-Android.datastore_android_sdk.iml" filepath="$PROJECT_DIR$/.idea/modules/datastore_android_sdk/EMMS-Android.datastore_android_sdk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/datastore_android_sdk/EMMS-Android.datastore_android_sdk.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/datastore_android_sdk/EMMS-Android.datastore_android_sdk.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/datastore_android_sdk/EMMS-Android.datastore_android_sdk.main.iml" filepath="$PROJECT_DIR$/.idea/modules/datastore_android_sdk/EMMS-Android.datastore_android_sdk.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/datastore_android_sdk/EMMS-Android.datastore_android_sdk.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/datastore_android_sdk/EMMS-Android.datastore_android_sdk.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/universal-image-loader/EMMS-Android.universal-image-loader.iml" filepath="$PROJECT_DIR$/.idea/modules/universal-image-loader/EMMS-Android.universal-image-loader.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/universal-image-loader/EMMS-Android.universal-image-loader.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/universal-image-loader/EMMS-Android.universal-image-loader.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/universal-image-loader/EMMS-Android.universal-image-loader.main.iml" filepath="$PROJECT_DIR$/.idea/modules/universal-image-loader/EMMS-Android.universal-image-loader.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/universal-image-loader/EMMS-Android.universal-image-loader.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/universal-image-loader/EMMS-Android.universal-image-loader.unitTest.iml" />
     </modules>
   </component>
 </project>
