@@ -38,7 +38,7 @@ export function zipHandler(zipFileStream, unZipFileCallback) {
 					size: zipEntry._data.uncompressedSize
 				}
 				
-				console.log(file.name, file.length)
+				console.log(file.name, file.size)
 				
 				saveFileToLocal(zipEntry.name, content);
 				if (unZipFileCallback) {
@@ -58,8 +58,9 @@ export function zipHandler(zipFileStream, unZipFileCallback) {
  * @param {stirng} content
  */
 function saveFileToLocal(filename, content) {
-    plus.io.requestFileSystem(plus.io.RelativeURL, (fs) => {
-        fs.root.getFile(filename, { create: true }, (fileEntry) => {
+	// #ifdef APP-PLUS
+	plus.io.requestFileSystem(plus.io.RelativeURL, (fs) => {
+	    fs.root.getFile(filename, { create: true }, (fileEntry) => {
 			fileEntry.createWriter((writer) => {
 				writer.onwriteend = () => {
 					console.log('File saved successfully:', filename);
@@ -75,7 +76,8 @@ function saveFileToLocal(filename, content) {
 		}, (e) => {
 			console.error('Failed to get file:', e);
 		});
-    }, (e) => {
-        console.error('Failed to request file system:', e);
-    });
+	}, (e) => {
+	    console.error('Failed to request file system:', e);
+	});
+	// #endif
 }

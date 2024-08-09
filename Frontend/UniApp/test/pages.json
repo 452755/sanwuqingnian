@@ -7,6 +7,30 @@
 			}
 		}
 	],
+	"subPackages": [
+	    {
+			"root": "devTools/page",
+			"name": "devToolsPage",
+			"pages": [
+				{
+					"path": "index",
+					"style": {
+						"navigationStyle": "custom"
+						// #ifdef APP-PLUS
+						,
+						"softinputMode": "adjustResize",
+						"backgroundColor": "transparent",
+						"animationDuration": 1,
+						"animationType": "none",
+						"popGesture": "none",
+						"bounce": "none",
+						"titleNView": false
+						// #endif
+					}
+				}
+			]
+	    }
+	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
