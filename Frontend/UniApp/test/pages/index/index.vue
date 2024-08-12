@@ -1,5 +1,5 @@
 <template>
-	<view class="content">
+	<view class="content" @click="click">
 		<view class="container" @touchstart="handleTouchStart" @touchend="handleTouchEnd">
 		  <scroll-view
 		    ref="scrollView"
@@ -38,6 +38,9 @@
 		});
 	  },
 	  methods: {
+		click() {
+			uni.$dev.show()
+		},
 	    handleScrollToLower() {
 	      // 仅当触摸结束时才执行加载更多数据的逻辑
 	      if (!this.isTouching) {

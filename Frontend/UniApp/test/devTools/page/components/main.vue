@@ -63,7 +63,7 @@
                 class="tabText"
                 :class="index == tabIndex ? 'active' : ''"
               >
-                {{ item.title }}
+                {{ item.showTitle }}
               </text>
               <view
                 class="tabLine"
@@ -559,10 +559,12 @@ export default {
       tabList: [
         {
           title: "Tools", //标题
+		  showTitle: "工具",
           hasLoad: false,
         },
         {
           title: "Error", //标题
+		  showTitle: "错误",
           canRefreshing: true, //是否允许下拉刷新
           isRefreshing: false, //下拉刷新状态
           refreshType: "waitPullUp", //刷新状态 'waitPullUp','waitRelease','refreshing'
@@ -576,6 +578,7 @@ export default {
         },
         {
           title: "Console", //标题
+		  showTitle: "控制台",
           canRefreshing: true, //是否允许下拉刷新
           isRefreshing: false, //下拉刷新状态
           refreshType: "waitPullUp", //刷新状态 'waitPullUp','waitRelease','refreshing'
@@ -589,6 +592,7 @@ export default {
         },
         {
           title: "Network", //标题
+		  showTitle: "网络",
           canRefreshing: true, //是否允许下拉刷新
           isRefreshing: false, //下拉刷新状态
           refreshType: "waitPullUp", //刷新状态 'waitPullUp','waitRelease','refreshing'
@@ -602,6 +606,7 @@ export default {
         },
         {
           title: "JsRunner", //标题
+		  showTitle: "运行JS",
           canRefreshing: false, //是否允许下拉刷新
           isRefreshing: false, //下拉刷新状态
           refreshType: "waitPullUp", //刷新状态 'waitPullUp','waitRelease','refreshing'
@@ -614,6 +619,7 @@ export default {
         },
         {
           title: "Storage", //标题
+		  showTitle: "存储",
           canRefreshing: true, //是否允许下拉刷新
           isRefreshing: false, //下拉刷新状态
           refreshType: "waitPullUp", //刷新状态 'waitPullUp','waitRelease','refreshing'
@@ -623,6 +629,7 @@ export default {
         },
         {
           title: "Pages", //标题
+		  showTitle: "页面",
           canRefreshing: true, //是否允许下拉刷新
           isRefreshing: false, //下拉刷新状态
           refreshType: "waitPullUp", //刷新状态 'waitPullUp','waitRelease','refreshing'
@@ -638,6 +645,7 @@ export default {
         },
         {
           title: "Vuex", //标题
+		  showTitle: "Vuex",
           canRefreshing: true, //是否允许下拉刷新
           isRefreshing: false, //下拉刷新状态
           refreshType: "waitPullUp", //刷新状态 'waitPullUp','waitRelease','refreshing'
@@ -647,6 +655,7 @@ export default {
         },
         {
           title: "Logs", //标题
+		  showTitle: "日志",
           canRefreshing: true, //是否允许下拉刷新
           isRefreshing: false, //下拉刷新状态
           refreshType: "waitPullUp", //刷新状态 'waitPullUp','waitRelease','refreshing'
@@ -660,6 +669,7 @@ export default {
         },
         {
           title: "Info", //标题
+		  showTitle: "信息",
           canRefreshing: true, //是否允许下拉刷新
           isRefreshing: false, //下拉刷新状态
           refreshType: "waitPullUp", //刷新状态 'waitPullUp','waitRelease','refreshing'
@@ -667,6 +677,7 @@ export default {
         },
         {
           title: "UniBus", //标题
+		  showTitle: "Uni事件监听",
           canRefreshing: true, //是否允许下拉刷新
           isRefreshing: false, //下拉刷新状态
           refreshType: "waitPullUp", //刷新状态 'waitPullUp','waitRelease','refreshing'
@@ -681,6 +692,7 @@ export default {
         },
         {
           title: "FileSys", //标题
+		  showTitle: "文件系统",
           canRefreshing: true, //是否允许下拉刷新
           isRefreshing: false, //下拉刷新状态
           refreshType: "waitPullUp", //刷新状态 'waitPullUp','waitRelease','refreshing'
@@ -698,6 +710,7 @@ export default {
         },
         {
           title: "Setting", //标题
+		  showTitle: "设置",
           canRefreshing: true, //是否允许下拉刷新
           isRefreshing: false, //下拉刷新状态
           refreshType: "waitPullUp", //刷新状态 'waitPullUp','waitRelease','refreshing'

@@ -87,6 +87,8 @@ const devTools = {
         logReport,
       }
 
+		console.log(uni.$dev)
+
       //! 注册jsRunner执行事件
       uni.$on("devTools_jsRunner", (code) => {
         let result = undefined;

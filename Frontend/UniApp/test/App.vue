@@ -4,7 +4,7 @@
 			console.log('App Launch')
 			try {
 				// 挂载APP启动日志提交
-				uni.$dev.logReport("appOnLaunch>" + JSON.stringify(option));
+				// uni.$dev.logReport("appOnLaunch>", option);
 			} catch (error) {}
 		},
 		onShow: function() {
