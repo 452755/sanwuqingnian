@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32505.173
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicJsonTest", "DynamicJsonTest\DynamicJsonTest.csproj", "{254B89BB-6A9C-4E2B-9F8E-48B321113FF8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicJsonTest", "DynamicJsonTest\DynamicJsonTest.csproj", "{254B89BB-6A9C-4E2B-9F8E-48B321113FF8}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RazorTest", "RazorTest\RazorTest.csproj", "{C4E278BA-FD18-4592-8F57-E264C9F1E62E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFTest", "WCFTest\WCFTest.csproj", "{F7910B74-62D6-421A-95C6-90684EC7240E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{C4E278BA-FD18-4592-8F57-E264C9F1E62E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4E278BA-FD18-4592-8F57-E264C9F1E62E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4E278BA-FD18-4592-8F57-E264C9F1E62E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7910B74-62D6-421A-95C6-90684EC7240E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7910B74-62D6-421A-95C6-90684EC7240E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7910B74-62D6-421A-95C6-90684EC7240E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7910B74-62D6-421A-95C6-90684EC7240E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

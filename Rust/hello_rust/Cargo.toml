@@ -7,8 +7,8 @@ edition = "2021"
 
 [dependencies]
 rand = "0.8.5"
-tempfile = "3.3.0"
-rustc-hash = "1.1.0"
-rustc-ap-rustc_ast = { git = "https://github.com/rust-lang/rust.git", package = "rustc-ap-rustc_ast", rev = "722.0.0" }
-rustc-ap-rustc_driver = { git = "https://github.com/rust-lang/rust.git", package = "rustc-ap-rustc_driver", rev = "722.0.0" }
-rustc-ap-rustc_interface = { git = "https://github.com/rust-lang/rust.git", package = "rustc-ap-rustc_interface", rev = "722.0.0" }
+# tempfile = "3.3.0"
+# rustc-hash = "1.1.0"
+# rustc-ap-rustc_ast = { git = "https://github.com/rust-lang/rust.git", package = "rustc-ap-rustc_ast", rev = "722.0.0" }
+# rustc-ap-rustc_driver = { git = "https://github.com/rust-lang/rust.git", package = "rustc-ap-rustc_driver", rev = "722.0.0" }
+# rustc-ap-rustc_interface = { git = "https://github.com/rust-lang/rust.git", package = "rustc-ap-rustc_interface", rev = "722.0.0" }

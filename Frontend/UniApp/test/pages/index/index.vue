@@ -30,7 +30,9 @@
 		DownLoadFile({
 		  url: 'app/base/getAllDishesImageFiles',
 		  method: 'POST',
-		  data: {}
+		  data: {},
+		  onHeadersReceived: this.handleOnHeadersReceived.bind(this),
+		  onChunkReceived: this.handleOnChunkReceived.bind(this),
 		}).then((res) => {
 		  zipHandler(res.data)
 		}).catch((err) => {
@@ -40,6 +42,12 @@
 	  methods: {
 		click() {
 			uni.$dev.show()
+		},
+		handleOnHeadersReceived(res) {
+			console.log(this, res)
+		},
+		handleOnChunkReceived(res) {
+			console.log(this, res)
 		},
 	    handleScrollToLower() {
 	      // 仅当触摸结束时才执行加载更多数据的逻辑

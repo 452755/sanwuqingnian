@@ -40,7 +40,7 @@ export function zipHandler(zipFileStream, unZipFileCallback) {
 				
 				console.log(file.name, file.size)
 				
-				saveFileToLocal(zipEntry.name, content);
+				// saveFileToLocal(zipEntry.name, content);
 				if (unZipFileCallback) {
 					unZipFileCallback(file)
 				}
