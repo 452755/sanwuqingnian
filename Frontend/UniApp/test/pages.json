@@ -5,6 +5,12 @@
 			"style": {
 				"navigationBarTitleText": "uni-app"
 			}
+		},
+		{
+			"path": "pages/test/dishesImgTest",
+			"style": {
+				"navigationBarTitleText": "测试"
+			}
 		}
 	],
 	"subPackages": [

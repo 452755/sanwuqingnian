@@ -1,6 +1,6 @@
 <template>
 	<view class="content" @click="click">
-		<view class="container" @touchstart="handleTouchStart" @touchend="handleTouchEnd">
+		<!-- <view class="container" @touchstart="handleTouchStart" @touchend="handleTouchEnd">
 		  <scroll-view
 		    ref="scrollView"
 		    :scroll-y="true"
@@ -11,7 +11,9 @@
 		      {{ item }}
 		    </view>
 		  </scroll-view>
-		</view>
+		</view> -->
+		
+		
 	</view>
 </template>
 
