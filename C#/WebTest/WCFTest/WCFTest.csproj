@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F7910B74-62D6-421A-95C6-90684EC7240E}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>WCFTest</RootNamespace>
+    <AssemblyName>WCFTest</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Activation" />
+    <Reference Include="System.ServiceModel.Activities" />
+    <Reference Include="System.ServiceModel.Channels" />
+    <Reference Include="System.ServiceModel.Discovery" />
+    <Reference Include="System.ServiceModel.Routing" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WCFService\ActionResult\ActionResult.cs" />
+    <Compile Include="WCFService\Attribute\ServiceMetadataAttribute.cs" />
+    <Compile Include="WCFService\CustomMessageInspector\TokenValidation.cs" />
+    <Compile Include="WCFService\Exception\TokenValidationException.cs" />
+    <Compile Include="WCFService\Extensions\StaticFileServiceExtension.cs" />
+    <Compile Include="WCFService\IMyService.cs" />
+    <Compile Include="WCFService\IStaticFileService.cs" />
+    <Compile Include="WCFService\MyService.cs" />
+    <Compile Include="WCFService\StaticFileService.cs" />
+    <Compile Include="WCFService\Utils\HttpMethods.cs" />
+    <Compile Include="WCFService\Utils\ServiceMetadataManager.cs" />
+    <Compile Include="WCFService\Utils\TokenOperate.cs" />
+    <Compile Include="WCFService\Utils\Utils.cs" />
+    <Compile Include="WCFService\WebSocket\WebSocketBinding.cs" />
+    <Compile Include="WCFService\WebSocket\WebSocketReplyChannel.cs" />
+    <Compile Include="WCFService\WebSocket\WebSocketReplyChannelListener.cs" />
+    <Compile Include="WCFService\WebSocket\WebSocketTransportBindingElement.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="WCFService\API\" />
+    <Folder Include="WCFService\RequesErrorHandler\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

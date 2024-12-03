@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MsCAD.DatabaseServices.Database" Collapsed="true">
+    <Position X="33.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gwUIQoAFCCAgIkQQCKBKIQQBBAhggIAAhdIIAIYJAAM=</HashCode>
+      <FileName>Database.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MsCAD.DatabaseServices.DBObject" Collapsed="true">
+    <Position X="16.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABIIAAAAAIARECABAAAAQCEAAAAAAAEAAAAAAAhA=</HashCode>
+      <FileName>DBObject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MsCAD.DatabaseServices.Arc" Collapsed="true">
+    <Position X="10.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CIgADIAAKAAAAgQACEAAAgAAAABAMAkAgAAEIAMIAJA=</HashCode>
+      <FileName>Entity\Arc.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MsCAD.DatabaseServices.ArcRec" Collapsed="true">
+    <Position X="15.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CIgADIAAKAAAAgQACEAAAgAAAABAMAkAgAAEIAMIAJA=</HashCode>
+      <FileName>Entity\ArcRec.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MsCAD.DatabaseServices.BlockReference" Collapsed="true">
+    <Position X="19.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABIAAAAAAAAAAAAAAAAAAAAAAEAAAAAAEIAAAABA=</HashCode>
+      <FileName>Entity\BlockReference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MsCAD.DatabaseServices.Circle" Collapsed="true">
+    <Position X="1.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAgABIAAKAAAAgQACAAAAAAAAAAAEAEAAAAEIAEIAJA=</HashCode>
+      <FileName>Entity\Circle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MsCAD.DatabaseServices.Entity" Collapsed="true">
+    <Position X="12" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAIAAIAAIAgQECAACAAgAAgAAEESAAAAEJAAIApA=</HashCode>
+      <FileName>Entity\Entity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MsCAD.DatabaseServices.Line" Collapsed="true">
+    <Position X="6.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAADIAAIAAAAgQACEAAAAAAAAABMAAAAAAEIAAIAJA=</HashCode>
+      <FileName>Entity\Line.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MsCAD.DatabaseServices.Polyline" Collapsed="true">
+    <Position X="13" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABIAAISAAAgQACAAAAAgAAAAAEAAIQIgGIAAIAJA=</HashCode>
+      <FileName>Entity\Polyline.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MsCAD.DatabaseServices.Ray" Collapsed="true">
+    <Position X="17.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACABIAAIAAAIgQACAAAAAAAAAAAEAAAAAAMIAAICJA=</HashCode>
+      <FileName>Entity\Ray.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MsCAD.DatabaseServices.Rectangle2" Collapsed="true">
+    <Position X="22" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgARKAAIACAQgQACCEAAAAAAAAAEAAAAAAEIAFICJI=</HashCode>
+      <FileName>Entity\Rectangle2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MsCAD.DatabaseServices.Text" Collapsed="true">
+    <Position X="4" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIABIAAIACAAgQACBCAIAAgAACAEQAIAAAEoAAIAJA=</HashCode>
+      <FileName>Entity\Text.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MsCAD.DatabaseServices.Xline" Collapsed="true">
+    <Position X="8.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACABIAAIAAAIgQACAAAAAAAAAAAEAAAAAAMIAAICJA=</HashCode>
+      <FileName>Entity\Xline.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MsCAD.DatabaseServices.GripPoint" Collapsed="true">
+    <Position X="35.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAQAAAAAIAAAAAABAAAAAAAAgAAGAAA=</HashCode>
+      <FileName>GripPoint.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MsCAD.DatabaseServices.MathUtils" Collapsed="true">
+    <Position X="37" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MathUtils.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MsCAD.DatabaseServices.ObjectIdMgr" Collapsed="true">
+    <Position X="33.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAEAAAAAAAQAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>ObjectIdMgr.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MsCAD.DatabaseServices.ObjectSnapPoint" Collapsed="true">
+    <Position X="35.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAIAAAAAABAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>ObjectSnapPoint.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MsCAD.DatabaseServices.BlockTable" Collapsed="true">
+    <Position X="24.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Table\BlockTable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MsCAD.DatabaseServices.DBTable" Collapsed="true">
+    <Position X="25.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACIABIBAAAACABRMCAAABASAAFAAQAQAAAAAAABAABA=</HashCode>
+      <FileName>Table\DBTable.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MsCAD.DatabaseServices.LayerTable" Collapsed="true">
+    <Position X="26.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAQAAAAAQAAQAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Table\LayerTable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MsCAD.DatabaseServices.TableIds" Collapsed="true">
+    <Position X="37" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Table\TableIds.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MsCAD.DatabaseServices.Block" Collapsed="true">
+    <Position X="31" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ECAABIAAAAAACBQACAABAAAAABAAAAQAAAAAAABAABA=</HashCode>
+      <FileName>TableRecord\Block.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MsCAD.DatabaseServices.DBTableRecord" Collapsed="true">
+    <Position X="30" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIIAAAAAAAAQECAAAAAAAAEAEAAAIAAAAAAAAABA=</HashCode>
+      <FileName>TableRecord\DBTableRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MsCAD.DatabaseServices.Layer" Collapsed="true">
+    <Position X="28.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgABIAAAAAIAAQACAAAAAgAAAAAAAWAAAAAAAAAAhA=</HashCode>
+      <FileName>TableRecord\Layer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MsCAD.DatabaseServices.Filer.XmlFiler" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Filer\XmlFiler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MsCAD.DatabaseServices.Filer.XmlFilerImpl" Collapsed="true">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgIACAAAAAAAAAIAAAAAgAACAQAAAAAAAAAEAAjA=</HashCode>
+      <FileName>Filer\XmlFilerImpl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="MsCAD.DatabaseServices.Bounding" Collapsed="true">
+    <Position X="33.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAACCQBQAQAAAAAgAABAMAQgAAAQAAAAQgAA=</HashCode>
+      <FileName>Bounding.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="MsCAD.DatabaseServices.ObjectId" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="37" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAQEgABAAAAAAAAAAIAAAAIACAAAAiA=</HashCode>
+      <FileName>ObjectId.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Struct>
+  <Struct Name="MsCAD.Colors.Color" Collapsed="true">
+    <Position X="35.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIgAAAACAAAAAAAEgAAAoBQAAAAAIIAIASABAAAAAig=</HashCode>
+      <FileName>Colors\Color.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="MsCAD.DatabaseServices.IDatabaseObserver" Collapsed="true">
+    <Position X="33.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IDatabaseObserver.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="MsCAD.DatabaseServices.TextAlignment" Collapsed="true">
+    <Position X="35.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAKAABgAAAQAAAAAAAAAAAAAAAAQAAAACCEAAAAAA=</HashCode>
+      <FileName>Entity\TextAlignment.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MsCAD.DatabaseServices.GripPointType" Collapsed="true">
+    <Position X="35.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAEAAAAEIACA=</HashCode>
+      <FileName>GripPointType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MsCAD.DatabaseServices.LineWeight" Collapsed="true">
+    <Position X="37" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAgAQFAAAAIAAAAAAAGM0AAAA=</HashCode>
+      <FileName>LineWeight.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MsCAD.DatabaseServices.ObjectSnapMode" Collapsed="true">
+    <Position X="33.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAIAAAAAAAAAAAAAEAAAAAAAAAAAAAAGAEAAAAEIACA=</HashCode>
+      <FileName>ObjectSnapMode.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MsCAD.Colors.ColorMethod" Collapsed="true">
+    <Position X="33.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAgAAAAAAAIAAAAAQAAAEAAAA=</HashCode>
+      <FileName>Colors\ColorMethod.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>

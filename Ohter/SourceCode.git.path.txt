@@ -1,0 +1,5 @@
+ColorPicker[颜色选择器]  https://github.com/cyotek/Cyotek.Windows.Forms.ColorPicker.git
+
+hml[花木兰控件库]  git@gitee.com:tlmbem/hml.git
+
+QMUI_Android[腾讯QMUI安卓组件库] git@github.com:Tencent/QMUI_Android.git

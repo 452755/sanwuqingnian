@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">视频工具箱</string>
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="title_toolbox">视频工具箱</string>
+    <string name="toolbox">视频工具箱</string>
+    <string name="toolbox_marker">工具箱标记</string>
+    <string name="marker_position">标记悬停位置</string>
+    <string name="screen_left">屏幕左侧</string>
+    <string name="screen_right">屏幕右侧</string>
+    <string name="manage_video_apps">视频应用管理</string>
+</resources>
