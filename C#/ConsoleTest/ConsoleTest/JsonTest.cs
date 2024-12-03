@@ -1,4 +1,4 @@
-﻿using Microsoft.IdentityModel.Tokens;
+﻿//using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -10,6 +10,10 @@ using System.Threading.Tasks;
 namespace ConsoleApp1
 {
     public class JsonTest {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="args"></param>
         public static void Test(string[] args) {
             new HttpHelper.Builder().onsuccess((str)=>{
                 Console.WriteLine(str);
