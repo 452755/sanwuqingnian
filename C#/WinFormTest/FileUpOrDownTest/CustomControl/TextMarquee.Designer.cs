@@ -30,7 +30,7 @@ namespace RestaurantTouchSystem.CustomControl.Marquee
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.tzxPanel4 = new TZXControlLibrary.PanelEx.TzxPanel();
+            this.tzxPanel4 = new System.Windows.Forms.Panel();
             this.pictureBoxIcon = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).BeginInit();
@@ -39,13 +39,7 @@ namespace RestaurantTouchSystem.CustomControl.Marquee
             // tzxPanel4
             // 
             this.tzxPanel4.BackColor = System.Drawing.Color.Transparent;
-            this.tzxPanel4.BorderColor = System.Drawing.Color.Transparent;
-            this.tzxPanel4.BorderSize = 0;
             this.tzxPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tzxPanel4.HasBottomBorder = false;
-            this.tzxPanel4.HasLeftBorder = false;
-            this.tzxPanel4.HasRightBorder = false;
-            this.tzxPanel4.HasTopBorder = false;
             this.tzxPanel4.Location = new System.Drawing.Point(28, 0);
             this.tzxPanel4.Margin = new System.Windows.Forms.Padding(0);
             this.tzxPanel4.Name = "tzxPanel4";
@@ -57,7 +51,7 @@ namespace RestaurantTouchSystem.CustomControl.Marquee
             // 
             this.pictureBoxIcon.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxIcon.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBoxIcon.Image = global::RestaurantTouchSystem.Properties.Resources.收到扫码点单订单信息;
+            this.pictureBoxIcon.Image = null;
             this.pictureBoxIcon.Location = new System.Drawing.Point(0, 0);
             this.pictureBoxIcon.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBoxIcon.Name = "pictureBoxIcon";
@@ -89,7 +83,7 @@ namespace RestaurantTouchSystem.CustomControl.Marquee
 
         #endregion
 
-        private TZXControlLibrary.PanelEx.TzxPanel tzxPanel4;
+        private System.Windows.Forms.Panel tzxPanel4;
         private System.Windows.Forms.PictureBox pictureBoxIcon;
         private System.Windows.Forms.Timer timer1;
     }
